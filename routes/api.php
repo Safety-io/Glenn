@@ -19,5 +19,5 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::post('/push', [PushController::class, 'push'])
-->middleware(\App\Http\Middleware\EnsureIsGithub::class);
+Route::post('/push', [PushController::class, 'push'])/*
+->middleware(\App\Http\Middleware\EnsureIsGithub::class)*/;
