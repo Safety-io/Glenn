@@ -20,4 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::post('/push', [PushController::class, 'push'])
-->middleware(\App\Http\Middleware\EnsureTokenIsValid::class);
+->middleware(\App\Http\Middleware\EnsureIsGithub::class);

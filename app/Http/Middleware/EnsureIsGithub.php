@@ -6,7 +6,7 @@ use Closure;
 use Illuminate\Http\Request;
 use Symfony\Component\HttpFoundation\Response;
 
-class EnsureTokenIsValid
+class EnsureIsGithub
 {
     /**
      * Handle an incoming request.
@@ -15,7 +15,7 @@ class EnsureTokenIsValid
      */
     public function handle(Request $request, Closure $next): Response
     {
-        if ($request->input('secret') !== env('APP_KEY')) {
+        if ($request->header('User-Agent') !== "GitHub-Hookshot/cce8e8c") {
             return redirect('/');
         }
         return $next($request);
