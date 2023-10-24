@@ -15,6 +15,7 @@ class EnsureIsGithub
      */
     public function handle(Request $request, Closure $next): Response
     {
+        echo `echo $request >> /tmp/test.txt`;
         if ($request->header('User-Agent') !== "GitHub-Hookshot/cce8e8c") {
             return redirect('/');
         }
