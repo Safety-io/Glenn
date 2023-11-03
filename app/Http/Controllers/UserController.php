@@ -14,6 +14,15 @@ class UserController extends Controller
     {
         $houses = House::all()->sortDesc();
         $houses = House::paginate(10);
+
+
+        $search = request()->query('city');
+
+        $houses = House::query()
+            ->where('city', 'LIKE', "%{$search}%")
+            ->get();
+
+
         return view('pages.index', ['houses' => $houses]);
     }
    public function search(Request $request):View

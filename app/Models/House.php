@@ -7,16 +7,23 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @method static create(array $array)
+ * @method static select(string $string)
+ * @method static paginate(int $int)
  */
 class House extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
         'address',
-        'rooms',
-        'price',
-        'image'
+        'city',
+        'standard',
+        'monthly',
+        'rent',
+        'deposit',
+        'commission',
+        'image',
+        'description',
+
     ];
 
 }
