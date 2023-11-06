@@ -391,69 +391,56 @@
                                             class="appearence-none   w-full py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="">
                                             <option>All</option>
-                                                                            @foreach( $houses as $house)
-                                                                                <option value="{{ $house->id }}">{{ $house->standard }}</option>
-                                                                            @endforeach
+                                            <option>Lubumbashi</option>
+                                            <option>Likasi</option>
                                         </select>
                                     </div>
                                     <div class="w-full p-3 md:w-1/2">
                                         <p class="mb-1.5 font-medium text-base text-white">
-                                            Country</p>
+                                            Standard</p>
                                         <select
                                             class="appearence-none   w-full py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="">
-                                            <option>Canada</option>
-                                            <option>Nepal</option>
-                                            <option>India</option>
-                                            <option>China</option>
+                                            <option>1+2</option>
                                         </select>
                                     </div>
                                     <div class="w-full p-3 md:w-1/2">
                                         <p class="mb-1.5 font-medium text-base text-white">
-                                            Country</p>
+                                            Price</p>
                                         <select
                                             class="appearence-none   w-full py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="">
-                                            <option>Canada</option>
-                                            <option>Nepal</option>
-                                            <option>India</option>
-                                            <option>China</option>
+                                            <option>500</option>
                                         </select>
                                     </div>
                                     <div class="w-full p-3 md:w-1/2">
                                         <p class="mb-1.5 font-medium text-base text-white">
-                                            Country</p>
+                                            Rent</p>
                                         <select
                                             class="appearence-none   w-full py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="">
-                                            <option>Canada</option>
-                                            <option>Nepal</option>
-                                            <option>India</option>
-                                            <option>China</option>
+                                            <option>1</option>
+                                            <option>2</option>
                                         </select>
                                     </div>
                                     <div class="w-full p-3 md:w-1/2">
                                         <p class="mb-1.5 font-medium text-base text-white">
-                                            Country</p>
+                                            Deposit</p>
                                         <select
                                             class="appearence-none   w-full py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="">
-                                            <option>Canada</option>
-                                            <option>Nepal</option>
-                                            <option>India</option>
-                                            <option>China</option>
+                                            <option>1</option>
+                                            <option>2</option>
                                         </select>
                                     </div>
                                     <div class="w-full p-3 md:w-1/2">
                                         <p class="mb-1.5 font-medium text-base text-white">
-                                            Country</p>
+                                            Commission</p>
                                         <select
                                             class="appearence-none   w-full py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="">
-                                            <option>Canada</option>
-                                            <option>Nepal</option>
-                                            <option>India</option>
-                                            <option>China</option>
+                                            <option>1</option>
+                                            <option>2</option>
                                         </select>
                                     </div>
                                     <div class="w-full p-3">
@@ -473,13 +460,13 @@
                         <div class="w-full md:w-auto p-1.5">
                             <button
                                 class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-blue-500 bg-white border border-blue-500 rounded-md dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:border-gray-700 hover:bg-blue-100 ">
-                                <p>Cancel</p>
+                                <p>reset</p>
                             </button>
                         </div>
                         <div class="w-full md:w-auto p-1.5">
                             <button
                                 class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 border border-blue-500 rounded-md hover:bg-blue-600 ">
-                                <p>Save</p>
+                                <p>search</p>
                             </button>
                         </div>
                     </div>
