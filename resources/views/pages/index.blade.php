@@ -7,10 +7,10 @@
 </head>
 <body >
 
-<section class=" font-poppins bg-blue-50 dark:bg-gray-800">
+<section class=" font-poppins bg-secondary">
     <div class="max-w-6xl px-4 mx-auto" x-data="{open:false}">
         <nav class="flex items-center justify-between py-4">
-            <a href="" class="text-3xl font-semibold leading-none dark:text-gray-400">GNPropertie</a>
+            <a href="" class="text-3xl font-semibold leading-none  text-black">GNPropertie</a>
             <div class="flex lg:hidden">
                 <a href="#"
                    class="inline-block px-4 py-3 mr-2 text-xs font-semibold leading-none text-blue-600 border border-blue-400 rounded dark:hover:text-blue-300 dark:text-gray-400 dark:border-gray-400 hover:text-blue-700 hover:border-blue-300">
@@ -33,9 +33,9 @@
             </div>
 
             <ul class="hidden lg:w-auto lg:space-x-12 lg:items-center lg:flex ">
-                <li><a href="" class="text-sm text-gray-700 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-300">Home</a>
+                <li><a href="" class="text-2xl text-black">Home</a>
                 </li>
-                <li><a href="" class="text-sm text-gray-700 hover:text-blue-700 dark:text-gray-400 dark:hover:text-blue-300">About us</a>
+                <li><a href=""  class="text-2xl text-black">About us</a>
                 </li>
             </ul>
             <div class="hidden lg:flex">
@@ -52,7 +52,7 @@
         </div>
         <div class="absolute inset-0 z-10 h-screen p-3 text-gray-700 duration-500 transform shadow-md dark:bg-gray-800 bg-blue-50 w-80 lg:hidden lg:transform-none lg:relative"
              :class="{'translate-x-0 ease-in-opacity-100' :open===true, '-translate-x-full ease-out opacity-0' : open===false}">
-            <div class="flex justify-between px-5 py-2">
+            <div class="flex justify-between px-5 p-30 py-2">
                 <a class="text-2xl font-bold dark:text-gray-400" href="#">GNPropertie</a>
                 <button class="rounded-md hover:text-blue-300 lg:hidden dark:text-gray-400" @click="open=false">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor"
@@ -369,10 +369,10 @@
 
 <section class="py-16 bg-gray-100 dark:bg-gray-800">
     <div class="max-w-6xl px-4 mx-auto">
-        <div class="rounded-lg shadow bg-gray-50 dark:bg-gray-900 dark:border-gray-900">
-            <div class="p-6 ">
-                <div class="pb-6 border-b border-gray-100 dark:border-gray-800 ">
-                    <h2 class="text-xl font-bold text-gray-800 md:text-3xl dark:text-gray-300">
+        <div class="rounded-lg " >
+            <div >
+                <div class="pb-6 border-b  ">
+                    <h2 class="text-xl font-bold text-white md:text-3xl">
                         Search Form
                     </h2>
                 </div>
@@ -443,13 +443,7 @@
                                             <option>2</option>
                                         </select>
                                     </div>
-                                    <div class="w-full p-3">
-                                        <p class="mb-1.5 font-medium text-base text-gray-800 dark:text-gray-400">
-                                             Address</p>
-                                        <input
-                                            class="w-full px-4 py-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-gray-500 dark:text-gray-400  text-base text-gray-900 rounded-lg font-normal border border-gray-200"
-                                            type="text" placeholder=" address">
-                                    </div>
+{{--                                  --}}
                                 </div>
                             </div>
                         </div>
@@ -475,6 +469,7 @@
         </div>
     </div>
 </section>
+<br>
 
 <section class=" items-center bg-white lg:h-screen font-poppins">
     @foreach( $houses as $house)
