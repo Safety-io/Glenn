@@ -479,8 +479,10 @@
                 <div class="">
                     <div class="flex flex-wrap pb-8 ">
                         <div class="self-stretch w-full overflow-hidden lg:w-1/2 ">
-                            <div class="h-96"><img class="object-cover w-full h-full"
-                                                   src="{{ ($house->image) }}" alt="">
+                            <div class="h-96">
+                                {{--Display fake image and real image located in storage folder fixutre image and--}}
+                                <img class="object-cover w-full h-full"
+                                                   src="{{ preg_match('/^(https?:\/\/)/', $house->image) == 1 ? $house->image: asset('storage/'.$house->image) }}" alt="house pic">
                             </div>
                         </div>
                         <div class="w-full lg:w-1/2">

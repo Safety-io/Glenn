@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\HouseResource\Pages;
 use App\Models\House;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -21,35 +22,43 @@ class HouseResource extends Resource
     {
         return $form
             ->schema([
-                TextInput::make('name')
-                    ->autofocus()
-                    ->required()
-                    ->unique(),
-
                 TextInput::make('address')
-                    ->required(),
-
-                TextInput::make('rooms')
                     ->required()
-                    ->type('number'),
-
-                TextInput::make('bathrooms')
+                    ->autofocus()
+                    ->placeholder('Address ex: 1154 Fort Street Mall'),
+                TextInput::make('city')
                     ->required()
-                    ->type('number'),
-
-                TextInput::make('price')
+                    ->autofocus()
+                    ->placeholder('City ex: Honolulu'),
+                TextInput::make('standard')
                     ->required()
-                    ->type('number'),
-
+                    ->autofocus()
+                    ->placeholder('Standard ex: 1 bedroom'),
+                TextInput::make('monthly')
+                    ->required()
+                    ->autofocus()
+                    ->placeholder('Monthly ex: 1,000'),
+                TextInput::make('rent')
+                    ->required()
+                    ->autofocus()
+                    ->placeholder('Rent ex: 1,000'),
+                TextInput::make('deposit')
+                    ->required()
+                    ->autofocus()
+                    ->placeholder('Deposit ex: 1,000'),
+                TextInput::make('commission')
+                    ->required()
+                    ->autofocus()
+                    ->placeholder('Commission ex: 1,000'),
                 FileUpload::make('image')
                     ->required()
-//                    ->multiple()
                     ->image()
-                    ->directory('houses')
-//                    ->acceptedFileTypes(['image/*'])
-//                    ->enableReordering()
-//                    ->enableDownload()
-//                    ->storeFileNamesIn('image')
+                    ->directory(config('image_upload_path')),
+
+                Select::make('house_statue')
+                    ->default('Available')
+                    ->options(['Available', 'Unavailable'])
+                    ->required(),
             ]);
     }
 
@@ -57,25 +66,31 @@ class HouseResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('name')
-                    ->searchable()
-                    ->sortable(),
-
                 Tables\Columns\TextColumn::make('address')
                     ->searchable()
                     ->sortable(),
-
-                Tables\Columns\TextColumn::make('rooms')
+                Tables\Columns\TextColumn::make('city')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('standard')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('monthly')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('rent')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('deposit')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('commission')
+                    ->searchable()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('house_statue')
                     ->searchable()
                     ->sortable(),
 
-                Tables\Columns\TextColumn::make('bathrooms')
-                    ->searchable()
-                    ->sortable(),
-
-                Tables\Columns\TextColumn::make('price')
-                    ->searchable()
-                    ->sortable()
             ])
             ->filters([
                 //
@@ -89,14 +104,14 @@ class HouseResource extends Resource
                 ]),
             ]);
     }
-    
+
     public static function getRelations(): array
     {
         return [
             //
         ];
     }
-    
+
     public static function getPages(): array
     {
         return [
