@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('deposit');
             $table->integer('commission');
             $table->string('image');
-            $table->string('description');
+            $table->string('house_statue');
             $table->timestamps();
         });
 

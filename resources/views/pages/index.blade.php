@@ -7,17 +7,17 @@
 </head>
 <body >
 
-<section class=" bg-secondary font-poppins py-7">
-    <div class="max-w-6xl px-1   bg-secondary mx-auto lg:px-6 ">
-        <div class="formbold-main-wrapper">
+<section class=" font-poppins bg-black/50 py-2">
+    <div class="max-w-6xl px-1  mx-auto lg:px-6 ">
+        <div class="formbold-main-wrapper ">
             <div class="formbold-form-wrapper">
-                <form action="" method="post">
-
+                <form action="/search" class=" p-12 " method="POST">
+                    @csrf
                     <div class="formbold-form-step-1 active">
                         <div class="formbold-input-flex">
                             <div>
                                 <label for="city" class="formbold-form-label"> City </label>
-                                <select name="city" id="city" class="formbold-form-input">
+                                <select name="search" id="city" class="formbold-form-input">
                                     <option>All</option>
                                     @foreach( $houses as $house)
                                         <option value="{{ $house->id }}">{{ $house->city }}</option>
@@ -36,7 +36,7 @@
                             </select>
                             </div>
                             <div>
-                            <label for="monthly" class="formbold-form-label"> Standard </label>
+                            <label for="monthly" class="formbold-form-label"> Prix </label>
                             <select name="monthly" id="monthly" class="formbold-form-input">
                                 <option>All</option>
                                 @foreach( $houses as $house)
@@ -370,7 +370,7 @@
                                                 <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
                                             </svg>
                                         </a>
-                                        <span>Description : {{ $house->description }}</span>
+                                        <span>Description : {{ $house->house_statue }}</span>
                                     </li>
                                 </ul>
                                 <div class="flex flex-wrap items-center ">

@@ -16,30 +16,6 @@ class UserController extends Controller
         $houses = House::paginate(10);
 
 
-        $search = request()->query('city');
-
-        $houses = House::query()
-            ->where('city', 'LIKE', "%{$search}%")
-            ->get();
-
-
         return view('pages.index', ['houses' => $houses]);
     }
-   public function search(Request $request):View
-   {
-       $search = $request->input('q');
-
-       $houses = House::query()
-           ->where('name', 'LIKE', "%{$search}%")
-           ->orWhere('address', 'LIKE', "%{$search}%")
-           ->orWhere('rooms', 'LIKE', "%{$search}%")
-           ->orWhere('price', 'LIKE', "%{$search}%")
-           ->get();
-       return view('pages.search', ['houses' => $houses]);
-
-   }
-
-
-
-
 }
