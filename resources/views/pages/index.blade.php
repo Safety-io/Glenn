@@ -380,21 +380,20 @@
                     <div class="w-full md:w-10/12">
                         <div class="flex flex-wrap -m-3">
                             <div class="w-full p-3 md:w-1/3">
-                                <p class="text-sm font-semibold text-gray-800 dark:text-gray-400">
-                                    Address</p>
+
                             </div>
                             <div class="w-full p-3 md:flex-1">
                                 <div class="flex flex-wrap -m-3">
                                     <div class="w-full p-3 md:w-1/2">
                                         <p class="mb-1.5 font-medium text-base text-white">
-                                            Country</p>
+                                            City</p>
                                         <select
                                             class="appearence-none   w-full py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="">
-                                            <option>Canada</option>
-                                            <option>Nepal</option>
-                                            <option>India</option>
-                                            <option>China</option>
+                                            <option>All</option>
+                                                                            @foreach( $houses as $house)
+                                                                                <option value="{{ $house->id }}">{{ $house->standard }}</option>
+                                                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="w-full p-3 md:w-1/2">
@@ -459,7 +458,7 @@
                                     </div>
                                     <div class="w-full p-3">
                                         <p class="mb-1.5 font-medium text-base text-gray-800 dark:text-gray-400">
-                                            Permanent address</p>
+                                             Address</p>
                                         <input
                                             class="w-full px-4 py-2.5 dark:bg-gray-800 dark:border-gray-800 dark:placeholder-gray-500 dark:text-gray-400  text-base text-gray-900 rounded-lg font-normal border border-gray-200"
                                             type="text" placeholder=" address">
