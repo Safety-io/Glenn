@@ -16,5 +16,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::controller(UserController::class)->group(function (){
     Route::get('/', 'index')->name('pages.index');
+//    search
     Route::post('/search', 'search')->name('pages.search');
+
 });
+

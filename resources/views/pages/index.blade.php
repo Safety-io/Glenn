@@ -83,295 +83,14 @@
     </div>
 </section>
 
-{{--
-<section class=" font-poppins bg-black/50 py-2">
-    <div class="max-w-6xl px-1  mx-auto lg:px-6 ">
-        <div class="formbold-main-wrapper ">
-            <div class="formbold-form-wrapper">
-                <form action="/search" class=" p-12 " method="POST">
-                    @csrf
-                    <div class="formbold-form-step-1 active">
-                        <div class="formbold-input-flex">
-                            <div>
-                                <label for="city" class="formbold-form-label"> City </label>
-                                <select name="search" id="city" class="formbold-form-input">
-                                    <option>All</option>
-                                    @foreach( $houses as $house)
-                                        <option value="{{ $house->id }}">{{ $house->city }}</option>
-                                    @endforeach
-                                </select>
-
-                            </div>
-                            <div class="formbold-input-flex">
-                            <div>
-                            <label for="standard" class="formbold-form-label"> Standard </label>
-                            <select name="standard" id="standard" class="formbold-form-input">
-                                <option>All</option>
-                                @foreach( $houses as $house)
-                                    <option value="{{ $house->id }}">{{ $house->standard }}</option>
-                                @endforeach
-                            </select>
-                            </div>
-                            <div>
-                            <label for="monthly" class="formbold-form-label"> Prix </label>
-                            <select name="monthly" id="monthly" class="formbold-form-input">
-                                <option>All</option>
-                                @foreach( $houses as $house)
-                                    <option value="{{ $house->id }}">{{ $house->monthly }}</option>
-                                @endforeach
-                            </select>
-                            </div>
-                            </div>
-                        </div>
-
-                        <div class="formbold-input-flex">
-                            <div>
-                                <label for="rent" class="formbold-form-label">Rent </label>
-                                <select name="rent" id="rent" class="formbold-form-input">
-                                    <option>All</option>
-                                    @foreach( $houses as $house)
-                                        <option value="{{ $house->id }}">{{ $house->rent }}</option>
-                                    @endforeach
-                                </select>
-                            </div>
-                            <div>
-                                <div>
-                                    <label for="deposit" class="formbold-form-label">Rent </label>
-                                    <select name="deposit" id="deposit" class="formbold-form-input">
-                                        <option>All</option>
-                                        @foreach( $houses as $house)
-                                            <option value="{{ $house->id }}">{{ $house->deposit }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-
-                            </div>
-                            <div>
-                                <div>
-                                    <label for="commission" class="formbold-form-label">Commission </label>
-                                    <select name="commission" id="commission" class="formbold-form-input">
-                                        <option>All</option>
-                                        @foreach( $houses as $house)
-                                            <option value="{{ $house->id }}">{{ $house->commission }}</option>
-                                        @endforeach
-                                    </select>
-                                </div>
-
-                            </div>
-                        </div>
-
-                        <div>
-                            <label for="address" class="formbold-form-label"> Address </label>
-                            <input
-                                type="text"
-                                name="address"
-                                id="address"
-                                class="formbold-form-input"
-                            />
-                        </div>
-                    </div>
-button
-                    <div class="formbold-form-btn-wrapper">
-                        <button type="submit" class="formbold-btn">Search</button>
-                        <button type="reset" class="formbold-btn ">Reset</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-            * {
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
-            body {
-                font-family: "Inter", sans-serif;
-            }
-            .formbold-main-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 48px;
-            }
-
-            .formbold-form-wrapper {
-                margin: 0 auto;
-                max-width: 550px;
-                width: 100%;
-                background: white;
-            }
-
-            .formbold-steps {
-                padding-bottom: 18px;
-                margin-bottom: 35px;
-                border-bottom: 1px solid #DDE3EC;
-            }
-            .formbold-steps ul {
-                padding: 0;
-                margin: 0;
-                list-style: none;
-                display: flex;
-                gap: 40px;
-            }
-            .formbold-steps li {
-                display: flex;
-                align-items: center;
-                gap: 14px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 24px;
-                color: #536387;
-            }
-            .formbold-steps li span {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: #DDE3EC;
-                border-radius: 50%;
-                width: 36px;
-                height: 36px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 24px;
-                color: #536387;
-            }
-            .formbold-steps li.active {
-                color: #07074D;;
-            }
-            .formbold-steps li.active span {
-                background: #6A64F1;
-                color: #FFFFFF;
-            }
-
-            .formbold-input-flex {
-                display: flex;
-                gap: 20px;
-                margin-bottom: 22px;
-            }
-            .formbold-input-flex > div {
-                width: 50%;
-            }
-            .formbold-form-input {
-                width: 100%;
-                padding: 13px 22px;
-                border-radius: 5px;
-                border: 1px solid #DDE3EC;
-                background: #FFFFFF;
-                font-weight: 500;
-                font-size: 16px;
-                color: #536387;
-                outline: none;
-                resize: none;
-            }
-            .formbold-form-input:focus {
-                border-color: #6a64f1;
-                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-            }
-            .formbold-form-label {
-                color: #07074D;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 24px;
-                display: block;
-                margin-bottom: 10px;
-            }
-
-            .formbold-form-confirm {
-                border-bottom: 1px solid #DDE3EC;
-                padding-bottom: 35px;
-            }
-            .formbold-form-confirm p {
-                font-size: 16px;
-                line-height: 24px;
-                color: #536387;
-                margin-bottom: 22px;
-                width: 75%;
-            }
-            .formbold-form-confirm > div {
-                display: flex;
-                gap: 15px;
-            }
-
-            .formbold-confirm-btn {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                background: #FFFFFF;
-                border: 0.5px solid #DDE3EC;
-                border-radius: 5px;
-                font-size: 16px;
-                line-height: 24px;
-                color: #536387;
-                cursor: pointer;
-                padding: 10px 20px;
-                transition: all .3s ease-in-out;
-            }
-            .formbold-confirm-btn {
-                box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.12);
-            }
-            .formbold-confirm-btn.active {
-                background: #6A64F1;
-                color: #FFFFFF;
-            }
-
-            .formbold-form-step-1,
-            .formbold-form-step-2,
-            .formbold-form-step-3 {
-                display: none;
-            }
-            .formbold-form-step-1.active,
-            .formbold-form-step-2.active,
-            .formbold-form-step-3.active {
-                display: block;
-            }
-
-            .formbold-form-btn-wrapper {
-                display: flex;
-                align-items: center;
-                justify-content: flex-end;
-                gap: 25px;
-                margin-top: 25px;
-            }
-            .formbold-back-btn {
-                cursor: pointer;
-                background: #FFFFFF;
-                border: none;
-                color: #07074D;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 24px;
-                display: none;
-            }
-            .formbold-back-btn.active {
-                display: block;
-            }
-            .formbold-btn {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-                font-size: 16px;
-                border-radius: 5px;
-                padding: 10px 25px;
-                border: none;
-                font-weight: 500;
-                background-color: #6A64F1;
-                color: white;
-                cursor: pointer;
-            }
-            .formbold-btn:hover {
-                box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
-            }
-
-        </style>
-    </div>
-</section>
---}}
 
 
 <section class="flex w-full mt-16 mb-16">
     <div class="rounded-lg w-4/6 px-16 pt-12 bg-white max-w-6xl mx-auto justify-center hover:drop-shadow-xl transition duration-700 hover:ease-in-out">
         <div class=" ">
+
+            <form action="/search" method="POST">
+            @csrf
             <div >
                 <div class="pb-10">
                     <h2 class="text-xl font-sm text-black md:text-xl">
@@ -381,9 +100,6 @@ button
                 <div class="flex w-full">
                     <div class="w-full flex-wrap">
                         <div class="">
-                            {{--<div class="w-full p-3 md:w-1/3">
-
-                            </div>--}}
                             <div class="w-full p-3 md:flex-1">
                                 <div class="flex flex-wrap -m-3">
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
@@ -391,16 +107,20 @@ button
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors bg-blue-50 outline-blue-300 mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="" id="city">
-                                            <option class="py-3">All</option>
-                                            <option>Lubumbashi</option>
-                                            <option>Likasi</option>
+                                            <option  class="py-3">All</option>
+                                            <option>Lefkosa (Nicosia)</option>
+                                            <option>Gazimagusa (Famagusta)</option>
+                                            <option>Girne (Kyrenia)</option>
+                                            <option>Guzelyurt</option>
+                                            <option>Lefke</option>
+                                            <option>Yeni Iskele</option>
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
                                         <label for="standard">Standard</label>
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="standard">
+                                            name="standard" id="standard">
                                             <option>1+2</option>
                                         </select>
                                     </div>
@@ -424,15 +144,18 @@ button
                                         <label for="deposit">Deposit</label>
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="deposit">
+                                            name="deposit" id="deposit">
+{{--                                            --}}
+                                            <option>All</option>
                                             <option>1</option>
                                             <option>2</option>
+                                            <option>3</option>
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
                                         <label for="commision">Commision</label><select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="commision">
+                                            name="commision" id="commision">
                                             <option>1</option>
                                             <option>2</option>
                                         </select>
@@ -440,6 +163,7 @@ button
 {{--                                  --}}
                                 </div>
                             </div>
+
                         </div>
                     </div>
                 </div>
@@ -447,12 +171,14 @@ button
                     <div class="flex flex-wrap justify-between">
                         <div class="w-full md:w-1/2 p-3">
                             <button
+                                type="reset"
                                 class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-blue-500 bg-white border border-blue-500 rounded-md dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:border-gray-700 hover:bg-blue-100 ">
                                 reset
                             </button>
                         </div>
                         <div class="w-full md:w-1/2 p-3">
                             <button
+                                type="submit"
                                 class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 border border-blue-500 rounded-md hover:bg-blue-600 ">
                                 search
                             </button>
@@ -460,6 +186,7 @@ button
                     </div>
                 </div>
             </div>
+            </form>
         </div>
     </div>
 </section>
