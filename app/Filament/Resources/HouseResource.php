@@ -26,30 +26,30 @@ class HouseResource extends Resource
                     ->required()
                     ->autofocus()
                     ->placeholder('Address ex: 1154 Fort Street Mall'),
-                TextInput::make('city')
+                Select::make('city')
                     ->required()
+                    ->options(['Lefkosa (Nicosia)', 'Gazimagusa (Famagusta)', 'Girne (Kyrenia)', 'Guzelyurt', 'Lefke', 'Yeni Iskele'])
                     ->autofocus()
                     ->placeholder('City ex: Honolulu'),
-                TextInput::make('standard')
+                Select::make('standard')
                     ->required()
-                    ->autofocus()
-                    ->placeholder('Standard ex: 1 bedroom'),
-                TextInput::make('monthly')
+                    ->options(['Studio', '1+1', '2+1', '3+1', '3+2', '4+1', '4+2', 'Villa', 'Room'])
+                    ->autofocus(),
+                Select::make('monthly')
                     ->required()
-                    ->autofocus()
-                    ->placeholder('Monthly ex: 1,000'),
-                TextInput::make('rent')
+                    ->options(['85', '100', '150', '200', '250', '300', '350', '400','450','500','550','600','650','700','750','800','850','900','950','1000'])
+                    ->autofocus(),
+                Select::make('rent')
+                    ->options(['1', '2', '3', '4', '5','6','7','8','9','10','11','12'])
+                    ->required(),
+                Select::make('deposit')
                     ->required()
-                    ->autofocus()
-                    ->placeholder('Rent ex: 1,000'),
-                TextInput::make('deposit')
+                    ->options(['1', '2', '3'])
+                    ->autofocus() ,
+                Select::make('commission')
                     ->required()
-                    ->autofocus()
-                    ->placeholder('Deposit ex: 1,000'),
-                TextInput::make('commission')
-                    ->required()
-                    ->autofocus()
-                    ->placeholder('Commission ex: 1,000'),
+                    ->options(['1', '2', '3', '4'])
+                    ->autofocus(),
                 FileUpload::make('image')
                     ->required()
                     ->image()
