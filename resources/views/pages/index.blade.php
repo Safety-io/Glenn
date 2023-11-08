@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">{{--
+    <meta name="csrf-token" content="{{ csrf_token() }}">--}}
+    <title>Home</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body class="bg-gray-100 text-gray-900">
@@ -89,8 +91,7 @@
     <div class="rounded-lg w-4/6 px-16 pt-12 bg-white max-w-6xl mx-auto justify-center hover:drop-shadow-xl transition duration-700 hover:ease-in-out">
         <div class=" ">
 
-            <form action="/search" method="POST">
-            @csrf
+            <form action="/search" method="GET" name="search_form">
             <div >
                 <div class="pb-10">
                     <h2 class="text-xl font-sm text-black md:text-xl">
@@ -103,11 +104,16 @@
                             <div class="w-full p-3 md:flex-1">
                                 <div class="flex flex-wrap -m-3">
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
+                                        <label for="address">Address</label>
+                                        <input id="address" type="text" name="address" class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg">
+                                    </div>
+                                    <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
                                         <label class="mb-2 text-md" for="city">City</label>
                                         <select
-                                            class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors bg-blue-50 outline-blue-300 mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="city">
-                                            <option  class="py-3">All</option>
+                                            class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
+                                            name="city" id="city">
+                                            <option value="">Choose city</option>
+                                            <option>All</option>
                                             <option>Lefkosa (Nicosia)</option>
                                             <option>Gazimagusa (Famagusta)</option>
                                             <option>Girne (Kyrenia)</option>
@@ -121,13 +127,15 @@
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="standard" id="standard">
+                                            <option value="">Choose standard</option>
                                             <option>1+2</option>
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
                                         <label for="price">Price</label><select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="price">
+                                            name="price" id="price">
+                                            <option value="">Choose price</option>
                                             <option>500</option>
                                         </select>
                                     </div>
@@ -135,7 +143,8 @@
                                         <label for="rent">Rent</label>
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="rent">
+                                            name="rent" id="rent">
+                                            <option value="">Choose rent</option>
                                             <option>1</option>
                                             <option>2</option>
                                         </select>
@@ -146,6 +155,7 @@
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="deposit" id="deposit">
 {{--                                            --}}
+                                            <option value="">Choose deposit</option>
                                             <option>All</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -156,6 +166,7 @@
                                         <label for="commision">Commision</label><select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="commision" id="commision">
+                                            <option value="">Choose commision</option>
                                             <option>1</option>
                                             <option>2</option>
                                         </select>
@@ -293,6 +304,7 @@
 
     </div>
     @endforeach
+    <div>{{ $houses->links() }}</div>
 </section>
 
 
