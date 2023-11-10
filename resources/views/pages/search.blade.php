@@ -30,7 +30,7 @@
                                                 </svg>
                                             </a>
                                             {{--                                        taille de  mots 20 --}}
-                                            <span>Location : {{  $house->address}}</span>
+                                            <span>Location : {{  $house->city}}</span>
                                         </li>
                                         <li class="flex gap-x-3 items-center mb-3 font-medium">
                                             <a href="" class="mr-1 text-green-600 dark:text-gray-400">

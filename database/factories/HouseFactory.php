@@ -18,12 +18,12 @@ class HouseFactory extends Factory
     {
         return [
             'address' => fake()->address(),
-            'city' => fake()->city(),
-            'standard' => fake()->randomNumber() . " Bedrooms",
-            'monthly' => fake()->numberBetween(1_000, 100_000),
-            'rent' => fake()->numberBetween(1_000, 100_000),
-            'deposit' => fake()->numberBetween(1_000, 100_000),
-            'commission' => fake()->numberBetween(1_000, 100_000),
+            'city' => fake()->randomElement(['Lefkosa', 'Gazimagusa', 'Girne', 'Guzelyurt', 'Iskele', 'Lefke', 'yeni iskele']),
+            'standard' => fake()->randomElement(['Studio', '1+1', '2+1', '3+1', '3+2', '4+1', '4+2', 'Villa', 'Room']),
+            'monthly' =>  fake()->numberBetween(85, 1000),
+            'rent' => fake()->numberBetween(1, 12),
+            'deposit' => fake()->numberBetween(1, 3),
+            'commission' => fake()->numberBetween(1, 4),
             'image' => fake()->imageUrl(),
             'house_statue' => fake()->randomElement(['Available', 'Unavailable']),
         ];

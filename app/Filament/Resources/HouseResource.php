@@ -52,6 +52,11 @@ class HouseResource extends Resource
                     ->autofocus(),
                 FileUpload::make('image')
                     ->required()
+                    ->imageCropAspectRatio('1:1')
+                    ->imageResizeTargetWidth('400')
+                    ->imageResizeTargetHeight('400')
+                    ->imageEditor()
+                    ->maxSize(1024 * 1024 * 2) // 2MB
                     ->image()
                     ->directory(config('image_upload_path')),
 

@@ -106,11 +106,11 @@
                                         <label class="mb-2 text-md" for="city">City</label>
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors bg-blue-50 outline-blue-300 mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="city">
+                                            name="city" id="city">
                                             <option  class="py-3">All</option>
-                                            <option>Lefkosa (Nicosia)</option>
-                                            <option>Gazimagusa (Famagusta)</option>
-                                            <option>Girne (Kyrenia)</option>
+                                            <option>Lefkosa  </option>
+                                            <option>Gazimagusa </option>
+                                            <option>Girne  </option>
                                             <option>Guzelyurt</option>
                                             <option>Lefke</option>
                                             <option>Yeni Iskele</option>
@@ -121,23 +121,63 @@
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="standard" id="standard">
-                                            <option>1+2</option>
+                                            <option>All</option>
+                                            <option>studio</option>
+                                            <option>1+1</option>
+                                            <option>2+1</option>
+                                            <option>3+1</option>
+                                            <option>3+2</option>
+                                            <option>4+1</option>
+                                            <option>4+2</option>
+                                            <option>villa</option>
+                                            <option>room</option>
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
                                         <label for="price">Price</label><select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="price">
+                                            name="monthly" id="price">
+                                            <option>All</option>
+                                            <option>85</option>
+                                            <option>100</option>
+                                            <option>150</option>
+                                            <option>200</option>
+                                            <option>250</option>
+                                            <option>300</option>
+                                            <option>350</option>
+                                            <option>400</option>
+                                            <option>450</option>
                                             <option>500</option>
+                                            <option>550</option>
+                                            <option>600</option>
+                                            <option>650</option>
+                                            <option>700</option>
+                                            <option>750</option>
+                                            <option>800</option>
+                                            <option>850</option>
+                                            <option>900</option>
+                                            <option>950</option>
+                                            <option>1000</option>
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
                                         <label for="rent">Rent</label>
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="" id="rent">
+                                            name="rent" id="rent">
+                                            <option>All</option>
                                             <option>1</option>
                                             <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                            <option>6</option>
+                                            <option>7</option>
+                                            <option>8</option>
+                                            <option>9</option>
+                                            <option>10</option>
+                                            <option>11</option>
+                                            <option>12</option>
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
@@ -145,7 +185,6 @@
                                         <select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="deposit" id="deposit">
-{{--                                            --}}
                                             <option>All</option>
                                             <option>1</option>
                                             <option>2</option>
@@ -155,9 +194,12 @@
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
                                         <label for="commision">Commision</label><select
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
-                                            name="commision" id="commision">
+                                            name="commission" id="commision">
+                                            <option>All</option>
                                             <option>1</option>
                                             <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
                                         </select>
                                     </div>
 {{--                                  --}}
@@ -193,6 +235,12 @@
 <br>
 
 <section class="items-center lg:h-screen font-poppins text-gray-700">
+
+    <div class="pb-10">
+        <h2 class="text-xl  font-sm text-black md:text-xl">
+            {{ $houses->count() .' Apartments Found' }}
+        </h2>
+    </div>
     @foreach( $houses as $house)
     <div class="max-w-6xl px-4 mx-auto">
         <div class="  items-center   ">
@@ -216,7 +264,7 @@
                                             </svg>
                                         </a>
 {{--                                        taille de  mots 20 --}}
-                                        <span>Location : {{  $house->address}}</span>
+                                        <span>Location : {{  $house->city}}</span>
                                     </li>
                                     <li class="flex gap-x-3 items-center mb-3 font-medium">
                                         <a href="" class="mr-1 text-green-600 dark:text-gray-400">

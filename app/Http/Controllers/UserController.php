@@ -17,12 +17,23 @@ class UserController extends Controller
 
         return view('pages.index', ['houses' => $houses]);
     }
-    public function search() : View
+    public function search(Request $request) : View
     {
+//
         $city = $_POST['city'];
+        $standard = $_POST['standard'];
+        $monthly = $_POST['monthly'];
+        $rent = $_POST['rent'];
         $deposit = $_POST['deposit'];
+        $commission = $_POST['commission'];
+
 
         $houses = House::where('deposit', 'LIKE', '%'.$deposit.'%')
+            ->Orwhere('city', 'LIKE', '%'.$city.'%')
+            ->Orwhere('standard', 'LIKE', '%'.$standard.'%')
+            ->Orwhere('monthly', 'LIKE', '%'.$monthly.'%')
+            ->Orwhere('rent', 'LIKE', '%'.$rent.'%')
+            ->Orwhere('commission', 'LIKE', '%'.$commission.'%')
             ->get();
         return view('pages.search', ['houses' => $houses]);
     }
