@@ -24,7 +24,7 @@
             </div>
 
             <ul class="hidden lg:w-auto lg:space-x-12 lg:items-center lg:flex ">
-                <li><a href="{{ route('pages.index') }}" class="text-sm text-black font-medium">Home</a>
+                <li><a href="" class="text-sm text-black font-medium">Home</a>
                 </li>
                 <li><a href=""  class="text-sm text-black font-medium">About us</a>
                 </li>

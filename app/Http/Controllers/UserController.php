@@ -13,7 +13,6 @@ class UserController extends Controller
     public function index():View | Paginator | App
     {
         $houses = House::all()->sortDesc();
-//        pagination
         $houses = House::paginate(10);
 
         return view('pages.index', ['houses' => $houses]);
@@ -45,11 +44,7 @@ class UserController extends Controller
     }
     public function detail(Request $request, string $id):View
     {
-        $id = $request->id;
-        if (!is_numeric($id)){
-            abort(404);
-        }
-        $house = House::findOrfail($id);
-        return view('pages.detail', ['house' => $house]);
+
+
     }
 }
