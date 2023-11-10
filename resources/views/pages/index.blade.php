@@ -230,6 +230,11 @@
                 </div>
             </div>
             </form>
+            <div class="pb-10">
+                <h2 class="text-xl  font-sm text-black md:text-xl">
+                    {{ $houses->count() .' Apartments Found' }}
+                </h2>
+            </div>
         </div>
     </div>
 </section>
@@ -237,11 +242,7 @@
 
 <section class="items-center lg:h-screen font-poppins text-gray-700">
 
-    <div class="pb-10">
-        <h2 class="text-xl  font-sm text-black md:text-xl">
-            {{ $houses->count() .' Apartments Found' }}
-        </h2>
-    </div>
+
     @foreach( $houses as $house)
     <div class="max-w-6xl px-4 mx-auto">
         <div class="  items-center   ">
@@ -327,7 +328,7 @@
                                 </ul>
                                 <div class="flex flex-wrap items-center ">
                                     <a href="https://wa.me/905338505827"
-                                       class="px-6 py-4 mb-4 mr-4 text-xs font-semibold leading-none text-center text-white bg-green-700 rounded hover:bg-green-500  ">
+                                       class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
                                         Contact</a>
                                     <a href="#"
                                        class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
@@ -343,6 +344,7 @@
     </div>
     @endforeach
 </section>
+
 
 
 

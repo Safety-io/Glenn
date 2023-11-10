@@ -13,13 +13,13 @@ class UserController extends Controller
     public function index():View | Paginator | App
     {
         $houses = House::all()->sortDesc();
+//        pagination
         $houses = House::paginate(10);
 
         return view('pages.index', ['houses' => $houses]);
     }
-    public function search(Request $request) : View
+    public function search() : View
     {
-//
         $city = $_POST['city'];
         $standard = $_POST['standard'];
         $monthly = $_POST['monthly'];
@@ -35,6 +35,10 @@ class UserController extends Controller
             ->Orwhere('rent', 'LIKE', '%'.$rent.'%')
             ->Orwhere('commission', 'LIKE', '%'.$commission.'%')
             ->get();
-        return view('pages.search', ['houses' => $houses]);
+
+        if ($city == 'All' && $standard == 'All' && $monthly == 'All' && $rent == 'All' && $deposit == 'All' && $commission == 'All'){
+            $houses = House::all();
+        }
+       return view('pages.search', ['houses' => $houses]);
     }
 }
