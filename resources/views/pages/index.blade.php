@@ -1,12 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    @vite(['resources/css/app.css', 'resources/js/app.js'])
-</head>
-<body class="bg-gray-100 text-gray-900">
-
+@extends('base')
+@section('title', 'Home')
+@section('content')
 <section class="bg-white ">
     <div class="max-w-6xl px-4 mx-auto " x-data="{open:false}">
         <nav class="flex items-center justify-between py-2">
@@ -330,7 +324,7 @@
                                     <a href="https://wa.me/905338505827"
                                        class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
                                         Contact</a>
-                                    <a href="#"
+                                    <a href="{{ route('pages.detail', $house->id) }} }}"
                                        class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
                                         Details</a>
                                 </div>
@@ -345,13 +339,6 @@
     @endforeach
 </section>
 
-
-
-
-
-
-
-
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
-</body>
-</html>
+
+@endsection

@@ -14,10 +14,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::controller(UserController::class)->group(function (){
-    Route::get('/', 'index')->name('pages.index');
-//    search
-    Route::post('/search', 'search')->name('pages.search');
-
+Route::controller(UserController::class)->name('pages.')->group(function (){
+    Route::get('/', 'index')->name('index');
+    Route::post('/search', 'search')->name('search');
+    Route::get('/detail/{id}', 'detail')->name('detail')->where(['id' => '[0-9]+','detail' => '[a-z]+' ]);
 });
 

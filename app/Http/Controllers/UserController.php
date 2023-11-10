@@ -41,7 +41,11 @@ class UserController extends Controller
         }
 
 
-
        return view('pages.search', ['houses' => $houses]);
+    }
+    public function detail($id):View
+    {
+        $house = House::find($id);
+        return view('pages.detail', ['house' => $house]);
     }
 }
