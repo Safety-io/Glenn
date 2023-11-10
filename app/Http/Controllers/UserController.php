@@ -43,9 +43,13 @@ class UserController extends Controller
 
        return view('pages.search', ['houses' => $houses]);
     }
-    public function detail($id):View
+    public function detail(Request $request, string $id):View
     {
-        $house = House::find($id);
+        $id = $request->id;
+        if (!is_numeric($id)){
+            abort(404);
+        }
+        $house = House::findOrfail($id);
         return view('pages.detail', ['house' => $house]);
     }
 }

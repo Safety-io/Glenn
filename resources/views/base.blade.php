@@ -9,6 +9,7 @@
     <title>@yield('title')</title>
 </head>
 <body>
+
 <div class="bg-gray-100 text-gray-900">
     @yield('content')
 </div>
