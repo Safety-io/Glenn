@@ -1,10 +1,12 @@
-@extends('base')
-@section('title', 'search')
-
-@include('layout.header')
-
-<br>
-    <section class="items-center lg:h-screen font-poppins text-gray-700">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    @vite(['resources/css/app.css', 'resources/js/app.js'])
+</head>
+<body>
+<section class="items-center lg:h-screen font-poppins text-gray-700">
     @foreach( $houses as $house)
         <div class="max-w-6xl px-4 mx-auto">
             <div class="  items-center   ">
@@ -27,6 +29,7 @@
                                                     <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
                                                 </svg>
                                             </a>
+                                            {{--                                        taille de  mots 20 --}}
                                             <span>Location : {{  $house->city}}</span>
                                         </li>
                                         <li class="flex gap-x-3 items-center mb-3 font-medium">
@@ -105,3 +108,5 @@
         </div>
     @endforeach
 </section>
+</body>
+</html>

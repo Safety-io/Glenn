@@ -158,7 +158,7 @@
         </div>
     </div>
 </section>
-
+<br>
 
 <section class="items-center lg:h-screen font-poppins text-gray-700">
 
@@ -250,7 +250,7 @@
                                     <a href="https://wa.me/905338505827"
                                        class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
                                         Contact</a>
-                                    <a href="#"
+                                    <a href="{{ route('pages.detail', $house->id) }} }}"
                                        class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
                                         Details</a>
                                 </div>
@@ -268,4 +268,3 @@
 <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
 
 @endsection
-
