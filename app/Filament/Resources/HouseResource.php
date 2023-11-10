@@ -51,11 +51,6 @@ class HouseResource extends Resource
                 Select::make('monthly')
                     ->required()
                     ->options(['85', '100', '150', '200', '250', '300', '350', '400','450','500','550','600','650','700','750','800','850','900','950','1000'])
-                    ->options('85')
-                    ->options('100')
-                    ->options('150')
-                    ->options('200')
-
                     ->autofocus(),
                 Select::make('rent')
                     ->options(['1', '2', '3', '4', '5','6','7','8','9','10','11','12'])
