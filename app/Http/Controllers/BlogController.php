@@ -19,26 +19,28 @@ class BlogController extends Controller
     }
     public function search(Request $request) : View
     {
-        $input = $request->all();
 
-        $address = $input['address'] ?? '';
-        $city = $input['city'] ?? '';
-        $deposit = $input['deposit'] ?? '';
-        $standard = $input['standard'] ?? '';
-        $monthly = $input['monthly'] ?? '';
-        $rent = $input['rent'] ?? '';
-        $commission = $input['commission'] ?? '';
-        $house_statue = $input['house_statue'] ?? '';
+//        city, standard, monthly, rent, deposit, commission
+        $city = $request->input('city');
+        $standard = $request->input('standard');
+        $monthly = $request->input('monthly');
+        $rent = $request->input('rent');
+        $deposit = $request->input('deposit');
+        $commission = $request->input('commission');
 
-        $houses = House::where('city', 'LIKE', '%'.$city.'%')
-            ->where('address', 'LIKE', '%'.$address.'%')
-            ->where('standard', 'LIKE', '%'.$standard.'%')
-            ->where('monthly', 'LIKE', '%'.$monthly.'%')
-            ->where('rent', 'LIKE', '%'.$rent.'%')
-            ->where('commission', 'LIKE', '%'.$commission.'%')
-            ->where('house_statue', 'LIKE', '%'.$house_statue.'%')
-            ->paginate();
+        $houses = House::query()
+            ->where('city', 'LIKE', "%{$city}%")
+            ->Orwhere('standard', 'LIKE', "%{$standard}%")
+            ->Orwhere('monthly', 'LIKE', "%{$monthly}%")
+            ->Orwhere('rent', 'LIKE', "%{$rent}%")
+            ->Orwhere('deposit', 'LIKE', "%{$deposit}%")
+            ->Orwhere('commission', 'LIKE', "%{$commission}%")
+            ->get();
 
         return view('pages.search', ['houses' => $houses]);
+
+
+
+
     }
 }
