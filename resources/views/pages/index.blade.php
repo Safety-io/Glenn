@@ -7,8 +7,8 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
 
-<section class="bg-white">
-    <div class="max-w-6xl px-4 mx-auto" x-data="{open:false}">
+<section class="bg-white ">
+    <div class="max-w-6xl px-4 mx-auto " x-data="{open:false}">
         <nav class="flex items-center justify-between py-2">
             <a href="" class="text-md font-medium leading-none  text-black">GNPropertie</a>
             <div class="flex lg:hidden">
@@ -216,14 +216,14 @@
                             <button
                                 type="reset"
                                 class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-blue-500 bg-white border border-blue-500 rounded-md dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:border-gray-700 hover:bg-blue-100 ">
-                                reset
+                                Clear Filter
                             </button>
                         </div>
                         <div class="w-full md:w-1/2 p-3">
                             <button
                                 type="submit"
                                 class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 border border-blue-500 rounded-md hover:bg-blue-600 ">
-                                search
+                                 Apply Filter
                             </button>
                         </div>
                     </div>

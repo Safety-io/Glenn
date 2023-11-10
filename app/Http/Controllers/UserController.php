@@ -39,6 +39,9 @@ class UserController extends Controller
         if ($city == 'All' && $standard == 'All' && $monthly == 'All' && $rent == 'All' && $deposit == 'All' && $commission == 'All'){
             $houses = House::all();
         }
+
+
+
        return view('pages.search', ['houses' => $houses]);
     }
 }
