@@ -34,6 +34,7 @@ class UserController extends Controller
             ->Orwhere('monthly', 'LIKE', '%'.$monthly.'%')
             ->Orwhere('rent', 'LIKE', '%'.$rent.'%')
             ->Orwhere('commission', 'LIKE', '%'.$commission.'%')
+            ->distinct()
             ->get();
 
         if ($city == 'All' && $standard == 'All' && $monthly == 'All' && $rent == 'All' && $deposit == 'All' && $commission == 'All'){

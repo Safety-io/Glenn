@@ -28,12 +28,12 @@
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors bg-blue-50 outline-blue-300 mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="city" id="city">
                                             <option  class="py-3">All</option>
-                                            <option>Lefkosa  </option>
-                                            <option>Gazimagusa </option>
-                                            <option>Girne  </option>
-                                            <option>Guzelyurt</option>
-                                            <option>Lefke</option>
-                                            <option>Yeni Iskele</option>
+                                            @php
+                                                $houses = \App\Models\House::orderBy('city', 'asc')->distinct()->get(['city']);
+                                             @endphp
+                                            @foreach($houses as $house)
+                                                <option>{{ $house->city }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
@@ -42,16 +42,12 @@
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="standard" id="standard">
                                             <option>All</option>
-                                            <option>studio</option>
-                                            <option>1+1</option>
-                                            <option>2+1</option>
-                                            <option>3+1</option>
-                                            <option>3+2</option>
-
-                                            <option>4+1</option>
-                                            <option>4+2</option>
-                                            <option>villa</option>
-                                            <option>room</option>
+                                            @php
+                                                $houses = \App\Models\House::orderBy('standard', 'asc')->distinct()->get(['standard']);
+                                            @endphp
+                                           @foreach($houses as $house)
+                                                <option>{{ $house->standard }}</option>
+                                           @endforeach
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
@@ -59,26 +55,12 @@
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="monthly" id="price">
                                             <option>All</option>
-                                            <option>85</option>
-                                            <option>100</option>
-                                            <option>150</option>
-                                            <option>200</option>
-                                            <option>250</option>
-                                            <option>300</option>
-                                            <option>350</option>
-                                            <option>400</option>
-                                            <option>450</option>
-                                            <option>500</option>
-                                            <option>550</option>
-                                            <option>600</option>
-                                            <option>650</option>
-                                            <option>700</option>
-                                            <option>750</option>
-                                            <option>800</option>
-                                            <option>850</option>
-                                            <option>900</option>
-                                            <option>950</option>
-                                            <option>1000</option>
+                                            @php
+                                                $houses = \App\Models\House::orderBy('monthly', 'asc')->distinct()->get(['monthly']);
+                                             @endphp
+                                            @foreach($houses as $house)
+                                                <option>{{ $house->monthly }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
@@ -87,18 +69,12 @@
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="rent" id="rent">
                                             <option>All</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
-                                            <option>5</option>
-                                            <option>6</option>
-                                            <option>7</option>
-                                            <option>8</option>
-                                            <option>9</option>
-                                            <option>10</option>
-                                            <option>11</option>
-                                            <option>12</option>
+                                            @php
+                                                $houses = \App\Models\House::orderBy('rent', 'asc')->distinct()->get(['rent']);
+                                            @endphp
+                                            @foreach($houses as $house)
+                                                <option>{{ $house->rent }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
@@ -107,9 +83,12 @@
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="deposit" id="deposit">
                                             <option>All</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
+                                            @php
+                                                $houses = \App\Models\House::orderBy('deposit', 'asc')->distinct()->get(['deposit']);
+                                            @endphp
+                                            @foreach($houses as $house)
+                                                <option>{{ $house->deposit }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
                                     <div class="p-3 w-full md:w-1/2 {{--md:w-1/2 sm:w-1/2--}}">
@@ -117,10 +96,12 @@
                                             class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                             name="commission" id="commision">
                                             <option>All</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
+                                            @php
+                                                $houses = \App\Models\House::orderBy('commission', 'asc')->distinct()->get(['commission']);
+                                            @endphp
+                                            @foreach($houses as $house)
+                                                <option>{{ $house->commission }}</option>
+                                            @endforeach
                                         </select>
                                     </div>
 {{--                                  --}}
@@ -250,7 +231,7 @@
                                     <a href="https://wa.me/905338505827"
                                        class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
                                         Contact</a>
-                                    <a href="{{ route('pages.detail', $house->id) }} }}"
+                                    <a href="#"
                                        class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
                                         Details</a>
                                 </div>

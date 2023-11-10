@@ -27,18 +27,54 @@ class HouseResource extends Resource
                     ->autofocus()
                     ->placeholder('Address ex: 1154 Fort Street Mall'),
                 Select::make('city')
-                    ->required()
-                    ->options('Lefkosa')
+                    ->options(function () {
+                        return House::all()->pluck('city', 'city');
+                    }),
+                Select::make('standard')
+                    ->options(function () {
+                        return House::all()->pluck('standard', 'standard');
+                    }),
+                Select::make('monthly')
+                    ->options(function () {
+                        return House::all()->pluck('monthly', 'monthly');
+                    }),
+                Select::make('rent')
+                    ->options(function () {
+                        return House::all()->pluck('rent', 'rent');
+                    }),
+                Select::make('deposit')
+                    ->options(function () {
+                        return House::all()->pluck('deposit', 'deposit');
+                    }),
+                Select::make('commission')
+                    ->options(function () {
+                        return House::all()->pluck('commission', 'commission');
+                    }),
+                FileUpload::make('image')
+                    ->imageCropAspectRatio('1:1')
+                    ->imageResizeTargetWidth('400')
+                    ->imageResizeTargetHeight('400')
+                    ->imageEditor()
+                    ->maxSize(1024 * 1024 * 2) // 2MB
+                    ->image()
+                    ->directory(config('image_upload_path')),
+                Select::make('house_statue')
+                    ->options(function () {
+                        return House::all()->pluck('house_statue', 'house_statue');
+                    }),
+//                Select::make('city')
+//                    ->required()
+//                    ->options('Lefkosa')
 //                    ->options('Gazimagusa')
 //                    ->options('Girne')
 //                    ->options('Guzelyurt')
 //                    ->options('Lefke')
 //                    ->options('Yeni Iskele')
-                    ->autofocus()
-                    ->placeholder('City ex: Honolulu'),
-                Select::make('standard')
-                    ->required()
-                    ->options('Studio')
+//                    ->autofocus()
+//                    ->placeholder('City ex: Honolulu'),
+//                Select::make('standard')
+//                    ->required()
+//                    ->options('Studio')
 //                    ->options('1+1')
 //                    ->options('2+1')
 //                    ->options('3+1')
@@ -47,36 +83,41 @@ class HouseResource extends Resource
 //                    ->options('4+2')
 //                    ->options('Villa')
 //                    ->options('Room')
-                    ->autofocus(),
-                Select::make('monthly')
-                    ->required()
-                    ->options(['85', '100', '150', '200', '250', '300', '350', '400','450','500','550','600','650','700','750','800','850','900','950','1000'])
-                    ->autofocus(),
-                Select::make('rent')
-                    ->options(['1', '2', '3', '4', '5','6','7','8','9','10','11','12'])
-                    ->required(),
-                Select::make('deposit')
-                    ->required()
-                    ->options(['1', '2', '3'])
-                    ->autofocus() ,
-                Select::make('commission')
-                    ->required()
-                    ->options(['1', '2', '3', '4'])
-                    ->autofocus(),
-                FileUpload::make('image')
-                    ->required()
-                    ->imageCropAspectRatio('1:1')
-                    ->imageResizeTargetWidth('400')
-                    ->imageResizeTargetHeight('400')
-                    ->imageEditor()
-                    ->maxSize(1024 * 1024 * 2) // 2MB
-                    ->image()
-                    ->directory(config('image_upload_path')),
-
-                Select::make('house_statue')
-                    ->default('Available')
-                    ->options(['Available', 'Unavailable'])
-                    ->required(),
+//                    ->autofocus(),
+//                Select::make('monthly')
+//                    ->required()
+//                    ->options(['85', '100', '150', '200', '250', '300', '350', '400','450','500','550','600','650','700','750','800','850','900','950','1000'])
+//                    ->options('85')
+//                    ->options('100')
+//                    ->options('150')
+//                    ->options('200')
+//
+//                    ->autofocus(),
+//                Select::make('rent')
+//                    ->options(['1', '2', '3', '4', '5','6','7','8','9','10','11','12'])
+//                    ->required(),
+//                Select::make('deposit')
+//                    ->required()
+//                    ->options(['1', '2', '3'])
+//                    ->autofocus() ,
+//                Select::make('commission')
+//                    ->required()
+//                    ->options(['1', '2', '3', '4'])
+//                    ->autofocus(),
+//                FileUpload::make('image')
+//                    ->required()
+//                    ->imageCropAspectRatio('1:1')
+//                    ->imageResizeTargetWidth('400')
+//                    ->imageResizeTargetHeight('400')
+//                    ->imageEditor()
+//                    ->maxSize(1024 * 1024 * 2) // 2MB
+//                    ->image()
+//                    ->directory(config('image_upload_path')),
+//
+//                Select::make('house_statue')
+//                    ->default('Available')
+//                    ->options(['Available', 'Unavailable'])
+//                    ->required(),
             ]);
     }
 
