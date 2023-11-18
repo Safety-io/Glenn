@@ -37,9 +37,6 @@ class BlogController extends Controller
             ->get();
 
         return view('pages.search', ['houses' => $houses]);
-
-
-
-
     }
+
 }

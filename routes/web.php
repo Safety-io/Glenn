@@ -18,6 +18,7 @@ Route::controller(BlogController::class)->group(function (){
     Route::get('/', 'index')->name('pages.index');
 //    search
     Route::Post('/search', 'search')->name('pages.search');
+    Route::Post('/detail', 'detail')->name('pages.detail');
 
 });
 
