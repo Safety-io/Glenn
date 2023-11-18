@@ -9,6 +9,10 @@ class City extends Model
 {
     use HasFactory;
 
+    public $filable = [
+        'name',
+    ];
+
     public function houses()
     {
         return $this->belongsTo(House::class);

@@ -1,10 +1,11 @@
 <section class="flex w-full mt-16 mb-16">
-    <div class="rounded-lg w-4/6 px-16 pt-12 bg-white max-w-6xl mx-auto justify-center hover:drop-shadow-xl transition duration-700 hover:ease-in-out">
+    <div
+        class="rounded-lg w-4/6 px-16 pt-12 bg-white max-w-6xl mx-auto justify-center hover:drop-shadow-xl transition duration-700 hover:ease-in-out">
         <div class=" ">
 
             <form action="/search" method="POST">
                 @csrf
-                <div >
+                <div>
                     <div class="pb-10">
                         <h2 class="text-xl font-sm text-black md:text-xl">
                             Search Form
@@ -20,13 +21,9 @@
                                             <select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors bg-blue-50 outline-blue-300 mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="city" id="city">
-                                                <option  class="py-3">All</option>
-
-                                                @php
-                                                    $houses = \App\Models\House::orderBy('city', 'asc')->distinct()->get(['city']);
-                                                @endphp
-                                                @foreach($houses as $house)
-                                                    <option value="{{ $house->city }}">{{ $house->city }}</option>
+                                                <option class="py-3">All</option>
+                                                @foreach( $cities as $it)
+                                                    <option value="{{ $it->city }}">{{ $it->city }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -36,11 +33,9 @@
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="standard" id="standard">
                                                 <option>All</option>
-                                                @php
-                                                    $houses = \App\Models\House::orderBy('standard', 'asc')->distinct()->get(['standard']);
-                                                @endphp
-                                                @foreach($houses as $house)
-                                                    <option value="{{ $house->standard }}">{{ $house->standard }}</option>
+
+                                                @foreach($standards as $it)
+                                                    <option value="{{ $it->standard }}">{{ $it->standard }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -49,11 +44,8 @@
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="monthly" id="price">
                                                 <option>All</option>
-                                                @php
-                                                    $houses = \App\Models\House::orderBy('monthly', 'asc')->distinct()->get(['monthly']);
-                                                @endphp
-                                                @foreach($houses as $house)
-                                                    <option value="{{ $house->monthly }}">{{ $house->monthly }}</option>
+                                                @foreach($prices as $it)
+                                                    <option value="{{ $it->monthly }}">{{ $it->monthly }}</option>
                                                 @endforeach
 
                                             </select>
@@ -63,12 +55,9 @@
                                             <select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="rent" id="rent">
-                                                @php
-                                                    $houses = \App\Models\House::orderBy('rent', 'asc')->distinct()->get(['rent']);
-                                                @endphp
                                                 <option>All</option>
-                                                @foreach($houses as $house)
-                                                    <option value="{{ $house->rent }}">{{ $house->rent }}</option>
+                                                @foreach($rents as $it)
+                                                    <option value="{{ $it->rent }}">{{ $it->rent }}</option>
                                                 @endforeach
 
                                             </select>
@@ -80,11 +69,8 @@
                                                 name="deposit" id="deposit">
 
                                                 <option>All</option>
-                                                @php
-                                                    $houses = \App\Models\House::orderBy('deposit', 'asc')->distinct()->get(['deposit']);
-                                                @endphp
-                                                @foreach($houses as $house)
-                                                    <option value="{{ $house->deposit }}">{{ $house->deposit }}</option>
+                                                @foreach($deposits as $it)
+                                                    <option value="{{ $it->deposit }}">{{ $it->deposit }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -93,11 +79,8 @@
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="commission" id="commission">
                                                 <option>All</option>
-                                                @php
-                                                    $houses = \App\Models\House::orderBy('commission', 'asc')->distinct()->get(['commission']);
-                                                @endphp
-                                                @foreach($houses as $house)
-                                                    <option value="{{ $house->commission }}">{{ $house->commission }}</option>
+                                                @foreach($commission as $it)
+                                                    <option value="{{ $it->commission }}">{{ $it->commission }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
