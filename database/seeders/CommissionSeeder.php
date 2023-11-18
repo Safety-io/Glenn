@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CommissionSeeder extends Seeder
 {
@@ -12,6 +12,11 @@ class CommissionSeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('commissions')->insert([
+            ['commission' => 1],
+            ['commission' => 2],
+            ['commission' => 3],
+            ['commission' => 4],
+        ]);
     }
 }

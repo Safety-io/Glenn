@@ -2,8 +2,8 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
+use Illuminate\Support\Facades\DB;
 
 class CitySeeder extends Seeder
 {
@@ -12,6 +12,14 @@ class CitySeeder extends Seeder
      */
     public function run(): void
     {
-        //
+        DB::table('cities')->insert([
+            ['name' => 'Gazmagusa'],
+            ['name' => 'Girne'],
+            ['name' => 'Guzelyurt'],
+            ['name' => 'Iskele'],
+            ['name' => 'Lefke'],
+            ['name' => 'Lefkosa'],
+            ['name' => 'yeni iskele'],
+        ]);
     }
 }
