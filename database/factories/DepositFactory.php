@@ -18,6 +18,7 @@ class DepositFactory extends Factory
     {
         return [
             //
+            'deposit' => fake()->numberBetween(1, 3),
         ];
     }
 }

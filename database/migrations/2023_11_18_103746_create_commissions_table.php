@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('commissions', function (Blueprint $table) {
             $table->id();
+            $table->string('commission');
             $table->timestamps();
         });
     }

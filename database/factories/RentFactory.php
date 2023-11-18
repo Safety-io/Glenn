@@ -18,6 +18,7 @@ class RentFactory extends Factory
     {
         return [
             //
+            'rent' => fake()->numberBetween(1, 12),
         ];
     }
 }

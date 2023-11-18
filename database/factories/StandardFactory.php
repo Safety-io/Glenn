@@ -17,7 +17,7 @@ class StandardFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'standard' => fake()->randomElement(['Studio', '1+1', '2+1', '3+1', '3+2', '4+1', '4+2', 'Villa', 'Room']),
         ];
     }
 }
