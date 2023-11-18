@@ -27,10 +27,29 @@ class House extends Model
         'house_statue'
 
     ];
-//    public function standard(): \Illuminate\Database\Eloquent\Relations\BelongsTo
-//    {
-//        return $this->belongsTo(Standard::class);
-//    }
 
+    public function standard()
+    {
+        return $this->hasOne(Standard::class);
+    }
 
+    public function rent()
+    {
+        return $this->hasOne(Rent::class);
+    }
+
+    public function commission()
+    {
+        return $this->hasOne(Commission::class);
+    }
+
+    public function deposit()
+    {
+        return $this->hasOne(Deposit::class);
+    }
+
+    public function price()
+    {
+        return $this->hasOne(Price::class);
+    }
 }
