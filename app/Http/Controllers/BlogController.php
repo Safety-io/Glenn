@@ -2,7 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\City;
+use App\Models\Commission;
+use App\Models\Deposit;
 use App\Models\House;
+use App\Models\Price;
+use App\Models\Rent;
+use App\Models\Standard;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
@@ -13,7 +19,25 @@ class BlogController extends Controller
     public function index():View | Paginator | App
     {
         $houses = House::query()->paginate(10);
-        return view('pages.index', ['houses' => $houses]);
+        $standards = Standard::all()->get('standard');
+        $cities = City::all()->get('name');
+        $rents = Rent::all()->get('rent');
+        $commissions = Commission::all()->get('commission');
+        $deposits = Deposit::all()->get('deposit');
+        $prices = Price::all()->get('price');
+
+        return view(
+            'pages.index',
+            [
+                'houses' => $houses,
+                'standards' => $standards,
+                'cities' => $cities,
+                'rents' => $rents,
+                'commissions' => $commissions,
+                'deposits' => $deposits,
+                'prices' => $prices,
+            ],
+        );
 
     }
     public function search(Request $request) : View
