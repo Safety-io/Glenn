@@ -21,7 +21,7 @@ return new class extends Migration
             $table->integer('deposit');
             $table->integer('commission');
             $table->string('image');
-            $table->string('house_statue');
+            $table->string('house_status');
             $table->timestamps();
         });
 
@@ -32,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('house_model');
+        Schema::dropIfExists('houses');
     }
 };

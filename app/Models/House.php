@@ -27,5 +27,10 @@ class House extends Model
         'house_statue'
 
     ];
+//    public function standard(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+//    {
+//        return $this->belongsTo(Standard::class);
+//    }
+
 
 }

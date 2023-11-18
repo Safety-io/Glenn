@@ -12,10 +12,9 @@ class BlogController extends Controller
 {
     public function index():View | Paginator | App
     {
-        $houses = House::all()->sortDesc();
-        $houses = House::paginate(10);
-
+        $houses = House::query()->paginate(10);
         return view('pages.index', ['houses' => $houses]);
+
     }
     public function search(Request $request) : View
     {

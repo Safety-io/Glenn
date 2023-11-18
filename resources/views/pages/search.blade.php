@@ -6,6 +6,8 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 <body>
+ @include('layout.header')
+<br>
 <section class="items-center lg:h-screen font-poppins text-gray-700">
     @foreach( $houses as $house)
         <div class="max-w-6xl px-4 mx-auto">
