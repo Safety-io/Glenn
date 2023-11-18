@@ -23,7 +23,7 @@
                                                 name="city" id="city">
                                                 <option class="py-3">All</option>
                                                 @foreach( $cities as $it)
-                                                    <option value="{{ $it->city }}">{{ $it->city }}</option>
+                                                    <option value="{{ $it->name }}">{{ $it->name }}</option>
                                                 @endforeach
                                             </select>
                                         </div>
@@ -45,7 +45,7 @@
                                                 name="monthly" id="price">
                                                 <option>All</option>
                                                 @foreach($prices as $it)
-                                                    <option value="{{ $it->monthly }}">{{ $it->monthly }}</option>
+                                                    <option value="{{ $it->price }}">{{ $it->price }}</option>
                                                 @endforeach
 
                                             </select>
@@ -79,7 +79,7 @@
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="commission" id="commission">
                                                 <option>All</option>
-                                                @foreach($commission as $it)
+                                                @foreach($commissions as $it)
                                                     <option value="{{ $it->commission }}">{{ $it->commission }}</option>
                                                 @endforeach
                                             </select>

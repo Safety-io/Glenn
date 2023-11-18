@@ -19,12 +19,12 @@ class BlogController extends Controller
     public function index():View | Paginator | App
     {
         $houses = House::query()->paginate(10);
-        $standards = Standard::all()->get('standard');
-        $cities = City::all()->get('name');
-        $rents = Rent::all()->get('rent');
-        $commissions = Commission::all()->get('commission');
-        $deposits = Deposit::all()->get('deposit');
-        $prices = Price::all()->get('price');
+        $standards = Standard::all();
+        $cities = City::all();
+        $rents = Rent::all();
+        $commissions = Commission::all();
+        $deposits = Deposit::all();
+        $prices = Price::all();
 
         return view(
             'pages.index',
