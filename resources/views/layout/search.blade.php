@@ -16,10 +16,10 @@
                             <div class="">
                                 <div class="w-full p-3 md:flex-1">
                                     <div class="flex flex-wrap -m-3">
-                                        <div class="p-3 w-full md:w-1/2 md:w-1/2 sm:w-1/2">
+                                        <div class="p-3 w-full md:w-1/2">
                                             <label class="mb-2 text-md" for="city">City</label>
                                             <select
-                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors bg-blue-50 outline-blue-300 mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
+                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="city" id="city">
                                                 <option class="py-3">All</option>
                                                 @foreach( $cities as $it)
@@ -27,7 +27,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="p-3 w-full md:w-1/2 md:w-1/2 sm:w-1/2">
+                                        <div class="p-3 w-full md:w-1/2">
                                             <label for="standard">Standard</label>
                                             <select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
@@ -39,7 +39,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="p-3 w-full md:w-1/2 md:w-1/2 sm:w-1/2">
+                                        <div class="p-3 w-full md:w-1/2">
                                             <label for="price">Price</label><select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="monthly" id="price">
@@ -50,7 +50,7 @@
 
                                             </select>
                                         </div>
-                                        <div class="p-3 w-full md:w-1/2 md:w-1/2 sm:w-1/2">
+                                        <div class="p-3 w-full md:w-1/2">
                                             <label for="rent">Rent</label>
                                             <select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
@@ -62,7 +62,7 @@
 
                                             </select>
                                         </div>
-                                        <div class="p-3 w-full md:w-1/2 md:w-1/2 sm:w-1/2">
+                                        <div class="p-3 w-full md:w-1/2">
                                             <label for="deposit">Deposit</label>
                                             <select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
@@ -74,7 +74,7 @@
                                                 @endforeach
                                             </select>
                                         </div>
-                                        <div class="p-3 w-full md:w-1/2 md:w-1/2 sm:w-1/2">
+                                        <div class="p-3 w-full md:w-1/2">
                                             <label for="commission">Commission</label><select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="commission" id="commission">
