@@ -18,6 +18,15 @@ class CityFactory extends Factory
     {
         return [
             //
+            'name' => $this->faker->randomElement([
+                'Gazmagusa',
+                'Girne',
+                'Guzelyurt',
+                'Iskele',
+                'Lefke',
+                'Lefkosa',
+                'yeni iskele',
+            ]),
         ];
     }
 }
