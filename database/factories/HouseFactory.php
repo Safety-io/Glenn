@@ -25,7 +25,7 @@ class HouseFactory extends Factory
             'deposit' => fake()->numberBetween(1, 3),
             'commission' => fake()->numberBetween(1, 4),
             'image' => fake()->imageUrl(),
-            'house_statue' => fake()->randomElement(['Available', 'Unavailable']),
+            'house_status' => fake()->randomElement(['Available', 'Unavailable']),
         ];
     }
 }
