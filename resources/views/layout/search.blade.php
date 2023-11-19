@@ -3,8 +3,7 @@
         class="rounded-lg w-4/6 px-16 pt-12 bg-white max-w-6xl mx-auto justify-center hover:drop-shadow-xl transition duration-700 hover:ease-in-out">
         <div class=" ">
 
-            <form action="/search" method="POST">
-                @csrf
+            <form action="/search" method="GET">
                 <div>
                     <div class="pb-10">
                         <h2 class="text-xl font-sm text-black md:text-xl">
