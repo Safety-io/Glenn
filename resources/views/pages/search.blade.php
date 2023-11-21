@@ -7,6 +7,7 @@
 </head>
 <body>
  @include('layout.header')
+ @include('layout.search')
 <br>
 <section class="items-center lg:h-screen font-poppins text-gray-700">
     @foreach( $houses as $house)
