@@ -9,6 +9,7 @@ use App\Models\House;
 use App\Models\Price;
 use App\Models\Rent;
 use App\Models\Standard;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
@@ -51,20 +52,44 @@ class BlogController extends Controller
         $prices = Price::all();
 
 //        city, standard, monthly, rent, deposit, commission
-        $city = $request->input('city');
-        $standard = $request->input('standard');
-        $monthly = $request->input('monthly');
-        $rent = $request->input('rent');
-        $deposit = $request->input('deposit');
-        $commission = $request->input('commission');
+        $city = $request->input('city', '');
+        $standard = $request->input('standard', '');
+        $monthly = $request->input('monthly', '');
+        $rent = $request->input('rent', '');
+        $deposit = $request->input('deposit', '');
+        $commission = $request->input('commission', '');
 
         $houses = House::query()
-            ->where('city', 'LIKE', "%$city%")
-            ->Orwhere('standard', 'LIKE', "%$standard%")
-            ->Orwhere('monthly', 'LIKE', "%$monthly%")
-            ->Orwhere('rent', 'LIKE', "%$rent%")
-            ->Orwhere('deposit', 'LIKE', "%$deposit%")
-            ->Orwhere('commission', 'LIKE', "%$commission%")
+            ->where(function($query) use ($city) {
+                if (!empty($city)) {
+                    $query->where('city', 'LIKE', "%$city%");
+                }
+            })
+            ->orWhere(function(Builder $query) use ($standard) {
+                if (!empty($standard)) {
+                    $query->where('standard', 'LIKE', "%$standard%");
+                }
+            })
+            ->orWhere(function(Builder $query) use ($monthly) {
+                if (!empty($monthly)) {
+                    $query->where('monthly', 'LIKE', "%$monthly%");
+                }
+            })
+            ->orWhere(function(Builder $query) use ($rent) {
+                if (!empty($rent)) {
+                    $query->where('rent', 'LIKE', "%$rent%");
+                }
+            })
+            ->orWhere(function(Builder $query) use ($deposit) {
+                if (!empty($deposit)) {
+                    $query->where('deposit', 'LIKE', "%$deposit%");
+                }
+            })
+            ->orWhere(function(Builder $query) use ($commission) {
+                if (!empty($commission)) {
+                    $query->where('commission', 'LIKE', "%$commission%");
+                }
+            })
             ->get();
 
         return view('pages.search', [
