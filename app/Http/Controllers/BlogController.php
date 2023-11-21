@@ -43,6 +43,13 @@ class BlogController extends Controller
     public function search(Request $request) : View
     {
 
+        $standards = Standard::all();
+        $cities = City::all();
+        $rents = Rent::all();
+        $commissions = Commission::all();
+        $deposits = Deposit::all();
+        $prices = Price::all();
+
 //        city, standard, monthly, rent, deposit, commission
         $city = $request->input('city');
         $standard = $request->input('standard');
@@ -52,15 +59,23 @@ class BlogController extends Controller
         $commission = $request->input('commission');
 
         $houses = House::query()
-            ->where('city', 'LIKE', "%{$city}%")
-            ->Orwhere('standard', 'LIKE', "%{$standard}%")
-            ->Orwhere('monthly', 'LIKE', "%{$monthly}%")
-            ->Orwhere('rent', 'LIKE', "%{$rent}%")
-            ->Orwhere('deposit', 'LIKE', "%{$deposit}%")
-            ->Orwhere('commission', 'LIKE', "%{$commission}%")
+            ->where('city', 'LIKE', "%$city%")
+            ->Orwhere('standard', 'LIKE', "%$standard%")
+            ->Orwhere('monthly', 'LIKE', "%$monthly%")
+            ->Orwhere('rent', 'LIKE', "%$rent%")
+            ->Orwhere('deposit', 'LIKE', "%$deposit%")
+            ->Orwhere('commission', 'LIKE', "%$commission%")
             ->get();
 
-        return view('pages.search', ['houses' => $houses]);
+        return view('pages.search', [
+            'houses' => $houses,
+            'standards' => $standards,
+            'cities' => $cities,
+            'rents' => $rents,
+            'commissions' => $commissions,
+            'deposits' => $deposits,
+            'prices' => $prices,
+            ]);
     }
 
 }
