@@ -2,14 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\City;
-use App\Models\Commission;
-use App\Models\Deposit;
-use App\Models\House;
-use App\Models\Price;
-use App\Models\Rent;
-use App\Models\Standard;
-use Illuminate\Database\Eloquent\Builder;
+use App\Models\{City, House, Standard, Rent, Commission, Deposit, Price};
+use Illuminate\Database\Eloquent\{Builder, Collection};
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\App;
 use Illuminate\View\View;
@@ -17,41 +11,43 @@ use Nette\Utils\Paginator;
 
 class BlogController extends Controller
 {
+    private Collection $standards;
+    private Collection $cities;
+    private Collection $rents;
+    private Collection $commissions;
+    private Collection $deposits;
+    private Collection $prices;
+
+    public function __construct()
+    {
+        $this->standards = Standard::all();
+        $this->cities = City::all();
+        $this->rents = Rent::all();
+        $this->commissions = Commission::all();
+        $this->deposits = Deposit::all();
+        $this->prices = Price::all();
+    }
+
     public function index():View | Paginator | App
     {
         $houses = House::query()->paginate(10);
-        $standards = Standard::all();
-        $cities = City::all();
-        $rents = Rent::all();
-        $commissions = Commission::all();
-        $deposits = Deposit::all();
-        $prices = Price::all();
 
         return view(
             'pages.index',
             [
                 'houses' => $houses,
-                'standards' => $standards,
-                'cities' => $cities,
-                'rents' => $rents,
-                'commissions' => $commissions,
-                'deposits' => $deposits,
-                'prices' => $prices,
+                'standards' => $this->standards,
+                'cities' => $this->cities,
+                'rents' => $this->rents,
+                'commissions' => $this->commissions,
+                'deposits' => $this->deposits,
+                'prices' => $this->prices,
             ],
         );
 
     }
     public function search(Request $request) : View
     {
-
-        $standards = Standard::all();
-        $cities = City::all();
-        $rents = Rent::all();
-        $commissions = Commission::all();
-        $deposits = Deposit::all();
-        $prices = Price::all();
-
-//        city, standard, monthly, rent, deposit, commission
         $city = $request->input('city', '');
         $standard = $request->input('standard', '');
         $monthly = $request->input('monthly', '');
@@ -94,12 +90,12 @@ class BlogController extends Controller
 
         return view('pages.search', [
             'houses' => $houses,
-            'standards' => $standards,
-            'cities' => $cities,
-            'rents' => $rents,
-            'commissions' => $commissions,
-            'deposits' => $deposits,
-            'prices' => $prices,
+            'standards' => $this->standards,
+            'cities' => $this->cities,
+            'rents' => $this->rents,
+            'commissions' => $this->commissions,
+            'deposits' => $this->deposits,
+            'prices' => $this->prices,
             ]);
     }
 
