@@ -1,119 +1,13 @@
-{{--<section class="flex w-full mt-16 mb-16">--}}
-{{--    <div--}}
-{{--        class="rounded-lg w-4/6 px-16 pt-12 bg-white max-w-6xl mx-auto justify-center hover:drop-shadow-xl transition duration-700 hover:ease-in-out">--}}
-{{--        <div class=" ">--}}
-
-{{--            <form action="/search" method="GET">--}}
-{{--                <div>--}}
-{{--                    <div class="pb-10">--}}
-{{--                        <h2 class="text-xl font-sm text-black md:text-xl">--}}
-{{--                            Search Form--}}
-{{--                        </h2>--}}
-{{--                    </div>--}}
-{{--                    <div class="flex w-full">--}}
-{{--                        <div class="w-full flex-wrap">--}}
-{{--                            <div class="">--}}
-{{--                                <div class="w-full p-3 md:flex-1">--}}
-{{--                                    <div class="flex flex-wrap -m-3">--}}
-{{--                                        <div class="p-3 w-full md:w-1/2">--}}
-{{--                                            <label class="mb-2 text-md" for="city">City</label>--}}
-{{--                                            <select--}}
-{{--                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "--}}
-{{--                                                name="city" id="city">--}}
-{{--                                                <option value="" class="py-3">All</option>--}}
-{{--                                                @foreach( $cities as $it)--}}
-{{--                                                    <option value="{{ $it->name }}">{{ $it->name }}</option>--}}
-{{--                                                @endforeach--}}
-{{--                                            </select>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="p-3 w-full md:w-1/2">--}}
-{{--                                            <label for="standard">Standard</label>--}}
-{{--                                            <select--}}
-{{--                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "--}}
-{{--                                                name="standard" id="standard">--}}
-{{--                                                <option value="">All</option>--}}
-
-{{--                                                @foreach($standards as $it)--}}
-{{--                                                    <option value="{{ $it->standard }}">{{ $it->standard }}</option>--}}
-{{--                                                @endforeach--}}
-{{--                                            </select>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="p-3 w-full md:w-1/2">--}}
-{{--                                            <label for="price">Price</label><select--}}
-{{--                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "--}}
-{{--                                                name="monthly" id="price">--}}
-{{--                                                <option value="">All</option>--}}
-{{--                                                @foreach($prices as $it)--}}
-{{--                                                    <option value="{{ $it->price }}">{{ $it->price }}</option>--}}
-{{--                                                @endforeach--}}
-
-{{--                                            </select>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="p-3 w-full md:w-1/2">--}}
-{{--                                            <label for="rent">Rent</label>--}}
-{{--                                            <select--}}
-{{--                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "--}}
-{{--                                                name="rent" id="rent">--}}
-{{--                                                <option value="">All</option>--}}
-{{--                                                @foreach($rents as $it)--}}
-{{--                                                    <option value="{{ $it->rent }}">{{ $it->rent }}</option>--}}
-{{--                                                @endforeach--}}
-
-{{--                                            </select>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="p-3 w-full md:w-1/2">--}}
-{{--                                            <label for="deposit">Deposit</label>--}}
-{{--                                            <select--}}
-{{--                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "--}}
-{{--                                                name="deposit" id="deposit">--}}
-
-{{--                                                <option value="">All</option>--}}
-{{--                                                @foreach($deposits as $it)--}}
-{{--                                                    <option value="{{ $it->deposit }}">{{ $it->deposit }}</option>--}}
-{{--                                                @endforeach--}}
-{{--                                            </select>--}}
-{{--                                        </div>--}}
-{{--                                        <div class="p-3 w-full md:w-1/2">--}}
-{{--                                            <label for="commission">Commission</label><select--}}
-{{--                                                class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "--}}
-{{--                                                name="commission" id="commission">--}}
-{{--                                                <option value="">All</option>--}}
-{{--                                                @foreach($commissions as $it)--}}
-{{--                                                    <option value="{{ $it->commission }}">{{ $it->commission }}</option>--}}
-{{--                                                @endforeach--}}
-{{--                                            </select>--}}
-{{--                                        </div>--}}
-
-{{--                                    </div>--}}
-{{--                                </div>--}}
-
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                    <div class="w-full mt-4 mb-8">--}}
-{{--                        <div class="flex flex-wrap justify-between">--}}
-{{--                            <div class="w-full md:w-1/2 p-3">--}}
-{{--                                <button--}}
-{{--                                    type="reset"--}}
-{{--                                    class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-blue-500 bg-white border border-blue-500 rounded-md dark:text-gray-300 dark:bg-gray-700 dark:hover:bg-gray-800 dark:border-gray-700 hover:bg-blue-100 ">--}}
-{{--                                    reset--}}
-{{--                                </button>--}}
-{{--                            </div>--}}
-{{--                            <div class="w-full md:w-1/2 p-3">--}}
-{{--                                <button--}}
-{{--                                    type="submit"--}}
-{{--                                    class="flex flex-wrap justify-center w-full px-4 py-2 text-sm font-medium text-white bg-blue-500 border border-blue-500 rounded-md hover:bg-blue-600 ">--}}
-{{--                                    search--}}
-{{--                                </button>--}}
-{{--                            </div>--}}
-{{--                        </div>--}}
-{{--                    </div>--}}
-{{--                </div>--}}
-{{--            </form>--}}
-{{--        </div>--}}
-{{--    </div>--}}
-{{--</section>--}}
-<div class="w-full px-4  md:px-0 ">
+<script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+<div class="flex justify-end md:w-4/5">
+    <button id="filter-btn" type="button" class="px-4 py-2 border-2 rounded-sm mb-5" >
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAGNJREFUSEvtkVsOABAMBPWoHIyj8uuVVrAqot9quzNkwEPg/80PEAk/iMhZG8XezAMfQkGlQQQPWLm+t6sreRRXzT1vwjaAB+zwoesgb1Dj4rgPOzgaMOvjHge/wSwBcQ8uOQGR9xgZA/2zngAAAABJRU5ErkJggg==" alt="icon"/>
+    </button>
+    <button id="filter-btn-close"    type="button" class="px-4  hidden py-2 border-2 rounded-sm mb-5" >
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR9JREFUSEvF1c8qBmEUx/HP6xoUpfxdcBEUV2AjN6AkW1LugJUsZKGUjUuwJq5ACQv/SqHcAx3N1DS9Q887M69nNzXP73vO73c6T0fLp9Oyvr4CFrGDmZpd3WITZ6FT7OAVIzXF8+uPmCoDvhoSz2V+ii920DdA3eDzQis7+BfAFk7wkRkcw7CMvS65JXewjgM8Yy4TvMQ4VnFUgiQDhnGOaTxhAGO4wwLe6wLi/hAuMkh832Aen01YFBqDuCoA7jHbFKBYfeQQJ/yPlRAW5cHnzSRnsIZDPGS2hFDYNYkVHDeRwQZO8VYY0yXsN5VByppKtihFPP6tBLxgNFWt4v8YhonyNo0HZ7cwir2yrrHd7cHpVfDXe3U3559FtQ74Btq5QBmn8YzGAAAAAElFTkSuQmCC" alt="closed"/>
+    </button>
+</div>
+<div class="w-full px-4  hidden md:px-0 " id="filter">
     <form action="/search" method="GET" class="  md:w-4/6 w-full max-w-6xl mx-auto px-6 py-8 bg-white ">
         <div class="flex flex-wrap -mx-3 mb-2 md:justify-between">
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -233,3 +127,6 @@
     </form>
 </div>
 <br>
+<script>
+
+</script>
