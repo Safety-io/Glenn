@@ -11,7 +11,7 @@
 <br>
 
 
-@include('layout.search')
+{{--@include('layout.search')--}}
 
 <section class="items-center lg:h-screen font-poppins text-gray-700">
     @foreach( $houses as $house)
