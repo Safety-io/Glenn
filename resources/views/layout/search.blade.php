@@ -1,12 +1,17 @@
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<div class="flex justify-end md:w-4/5">
+
+<div class="max-w-6xl px-4 mx-auto">
+    <div class="  px-4 lg:px-6 py-2.5 ">
+        <div class="w-full mx-auto mb-16 sm:w-4/5 sm:mb-0 flex justify-end ">
     <button id="filter-btn" type="button" class="px-4 py-2 border-2 rounded-sm mb-5" >
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAGNJREFUSEvtkVsOABAMBPWoHIyj8uuVVrAqot9quzNkwEPg/80PEAk/iMhZG8XezAMfQkGlQQQPWLm+t6sreRRXzT1vwjaAB+zwoesgb1Dj4rgPOzgaMOvjHge/wSwBcQ8uOQGR9xgZA/2zngAAAABJRU5ErkJggg==" alt="icon"/>
     </button>
-    <button id="filter-btn-close"    type="button" class="px-4  hidden py-2 border-2 rounded-sm mb-5" >
+    <button id="filter-btn-close"  type="button" class="px-4  hidden py-2 border-2 rounded-sm mb-5" >
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAR9JREFUSEvF1c8qBmEUx/HP6xoUpfxdcBEUV2AjN6AkW1LugJUsZKGUjUuwJq5ACQv/SqHcAx3N1DS9Q887M69nNzXP73vO73c6T0fLp9Oyvr4CFrGDmZpd3WITZ6FT7OAVIzXF8+uPmCoDvhoSz2V+ii920DdA3eDzQis7+BfAFk7wkRkcw7CMvS65JXewjgM8Yy4TvMQ4VnFUgiQDhnGOaTxhAGO4wwLe6wLi/hAuMkh832Aen01YFBqDuCoA7jHbFKBYfeQQJ/yPlRAW5cHnzSRnsIZDPGS2hFDYNYkVHDeRwQZO8VYY0yXsN5VByppKtihFPP6tBLxgNFWt4v8YhonyNo0HZ7cwir2yrrHd7cHpVfDXe3U3559FtQ74Btq5QBmn8YzGAAAAAElFTkSuQmCC" alt="closed"/>
     </button>
 </div>
+        </div>
+    </div>
 
 
 
@@ -118,18 +123,22 @@
         <div class="flex flex-wrap -mx-3 mb-2 md:justify-between">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <div class="relative">
-                    <button type="reset" name="reset" class="    w-full bg-red-400 text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Reset
+                    <button type="reset" name="city" class="    w-full bg-red-400 text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Reset
                     </button>
                 </div>
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <div class="relative">
-                    <button type="submit" name="submit" class="    w-full bg-green-500  text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Search</button>
+                    <button type="submit" name="city" class="    w-full bg-green-500  text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Search</button>
                 </div>
             </div>
         </div>
     </form>
 </div>
+<br>
+<div class="max-w-6xl px-4 mx-auto">
+    <div class="items-center">
+        <div class="w-full mx-auto mb-16 sm:w-4/5 sm:mb-0">
 @if($houses->count() == 0)
     <div class="flex justify-center items-center h-screen">
         <div class="flex flex-col justify-center items-center">
@@ -141,4 +150,6 @@
 @else
     <h1 class="text-4xl font-bold text-gray-700">{{ $houses->count() }}  Apartments Found</h1>
 @endif
+            </div>
+    </div>
 <br>
