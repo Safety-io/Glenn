@@ -118,13 +118,13 @@
         <div class="flex flex-wrap -mx-3 mb-2 md:justify-between">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <div class="relative">
-                    <button type="reset" name="city" class="    w-full bg-red-400 text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Reset
+                    <button type="reset" name="reset" class="    w-full bg-red-400 text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Reset
                     </button>
                 </div>
             </div>
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <div class="relative">
-                    <button type="submit" name="city" class="    w-full bg-green-500  text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Search</button>
+                    <button type="submit" name="submit" class="    w-full bg-green-500  text-white font-bold py-3 px-4 pr-8 rounded   focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">Filter Search</button>
                 </div>
             </div>
         </div>
