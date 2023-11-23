@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Title</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @extends('title','Search');
 </head>
 <body>
  @include('layout.header')
