@@ -79,11 +79,8 @@
                             </ul>
                             <div class="flex flex-wrap items-center ">
                                 <a href="https://wa.me/905338505827"
-                                   class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
+                                   class="px-6 py-4 mb-4 mr-2 text-xs font-bold bg-green-500  text-white text-center    rounded hover:bg-green-600  ">
                                     Contact</a>
-                                <a href="#"
-                                   class="px-6 py-4 mb-4 mr-2 text-xs font-semibold leading-none text-center text-blue-600 bg-blue-200 rounded hover:bg-blue-600 hover:text-gray-200 dark:bg-blue-800 dark:text-gray-200 dark:hover:bg-blue-700">
-                                    Details</a>
                             </div>
                         </div>
                     </div>
