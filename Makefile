@@ -19,7 +19,7 @@ vendor/autoload.php: composer.lock
 
 public/build/manifest.json: package.json
 	npm install
-	npm run dev
+	#npm run dev
 
 public/build:
 	npm run build
