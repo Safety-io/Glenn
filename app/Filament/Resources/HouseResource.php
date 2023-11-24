@@ -57,6 +57,7 @@ class HouseResource extends Resource
                     ->imageEditor()
                     ->maxSize(1024 * 1024 * 2) // 2MB
                     ->image()
+                    ->multiple()
                     ->directory(config('image_upload_path')),
                 Select::make('house_statue')
                     ->options(function () {

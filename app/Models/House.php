@@ -13,6 +13,14 @@ use Illuminate\Database\Eloquent\Model;
  */
 class House extends Model
 {
+
+    /*
+     * @var array
+     */
+    protected $casts = [
+        'image' => 'array',
+    ];
+
     use HasFactory;
     protected $fillable = [
         'address',
