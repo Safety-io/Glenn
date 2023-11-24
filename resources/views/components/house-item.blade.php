@@ -21,6 +21,7 @@
                                 </div>
                                 <!-- Slider indicators -->
                                 <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
+                                    @if ($house->image)
                                     @foreach($house->image as $image)
                                         @if($loop->first)
                                             <button type="button" class="w-3 h-3 rounded-full" aria-current="true" aria-label="Slide {{ $loop->index + 1 }}" data-carousel-slide-to="{{ $loop->index }}"></button>
@@ -28,6 +29,7 @@
                                             <button type="button" class="w-3 h-3 rounded-full" aria-current="false" aria-label="Slide {{ $loop->index + 1 }}" data-carousel-slide-to="{{ $loop->index }}"></button>
                                         @endif
                                     @endforeach
+                                    @endif
                                 </div>
                                 <!-- Slider controls -->
                                 <button type="button" class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none" data-carousel-prev>
