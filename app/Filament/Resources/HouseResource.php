@@ -3,7 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\HouseResource\Pages;
+use App\Models\City;
+use App\Models\Commission;
+use App\Models\Deposit;
 use App\Models\House;
+use App\Models\Price;
+use App\Models\Rent;
+use App\Models\Standard;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -28,27 +34,27 @@ class HouseResource extends Resource
                     ->placeholder('Address ex: 1154 Fort Street Mall'),
                 Select::make('city')
                     ->options(function () {
-                        return House::all()->pluck('city', 'city');
+                        return City::all()->pluck('name');
                     }),
                 Select::make('standard')
                     ->options(function () {
-                        return House::all()->pluck('standard', 'standard');
+                        return Standard::all()->pluck('standard');
                     }),
                 Select::make('monthly')
                     ->options(function () {
-                        return House::all()->pluck('monthly', 'monthly');
+                        return Price::all()->pluck('price');
                     }),
                 Select::make('rent')
                     ->options(function () {
-                        return House::all()->pluck('rent', 'rent');
+                        return Rent::all()->pluck('rent');
                     }),
                 Select::make('deposit')
                     ->options(function () {
-                        return House::all()->pluck('deposit', 'deposit');
+                        return Deposit::all()->pluck('deposit');
                     }),
                 Select::make('commission')
                     ->options(function () {
-                        return House::all()->pluck('commission', 'commission');
+                        return Commission::all()->pluck('commission');
                     }),
                 FileUpload::make('image')
                     ->imageCropAspectRatio('1:1')
@@ -61,7 +67,7 @@ class HouseResource extends Resource
                     ->directory(config('image_upload_path')),
                 Select::make('house_statue')
                     ->options(function () {
-                        return House::all()->pluck('house_statue', 'house_statue');
+                        return ["Available", "Unavailable"];
                     }),
             ]);
     }
