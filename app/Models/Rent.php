@@ -9,6 +9,9 @@ class Rent extends Model
 {
     use HasFactory;
 
+    public $fillable = [
+        'rent',
+    ];
     public function house()
     {
         return $this->belongsTo(House::class);

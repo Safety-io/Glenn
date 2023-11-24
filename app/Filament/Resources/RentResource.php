@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\RentResource\Pages;
 use App\Models\Rent;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -22,7 +23,9 @@ class RentResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('rent')
+                    ->required()
+                    ->autofocus()
             ]);
     }
 

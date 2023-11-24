@@ -9,6 +9,9 @@ class Standard extends Model
 {
     use HasFactory;
 
+    public $fillable = [
+        'standard',
+    ];
     public function house()
     {
         return $this->belongsTo(House::class);

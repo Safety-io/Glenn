@@ -5,6 +5,7 @@ namespace App\Filament\Resources;
 use App\Filament\Resources\PriceResource\Pages;
 use App\Models\Price;
 use Filament\Forms;
+use Filament\Forms\Components\TextInput;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
 use Filament\Tables;
@@ -22,7 +23,10 @@ class PriceResource extends Resource
     {
         return $form
             ->schema([
-                //
+                TextInput::make('price')
+                    ->required()
+                    ->autofocus()
+                ->placeholder('123 Main St'),
             ]);
     }
 
