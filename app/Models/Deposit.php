@@ -8,7 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Deposit extends Model
 {
     use HasFactory;
-
+    protected $fillable = [
+        'deposit',
+    ];
     public function house()
     {
         return $this->belongsTo(House::class);
