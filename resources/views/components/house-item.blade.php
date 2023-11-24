@@ -9,11 +9,13 @@
                                 <!-- Carousel wrapper -->
                                 <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
                                     <!-- Item 1 -->
+                                    @if($house->$image)
                                     @foreach($house->image as $image)
                                         <div class="hidden duration-700 ease-in-out" data-carousel-item>
                                             <img src="storage/{{ $image }}" class="absolute block w-full -translate-x-1/2 -translate-y-1/2 top-1/2 left-1/2" alt="...">
                                         </div>
                                     @endforeach
+                                    @endif
                                 </div>
                                 <!-- Slider indicators -->
                                 <div class="absolute z-30 flex -translate-x-1/2 bottom-5 left-1/2 space-x-3 rtl:space-x-reverse">
