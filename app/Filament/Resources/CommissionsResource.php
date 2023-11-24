@@ -22,7 +22,11 @@ class CommissionsResource extends Resource
     {
         return $form
             ->schema([
-                //
+                Forms\Components\TextInput::make('commission')
+                    ->autofocus()
+                    ->required()
+                    ->unique(Commission::class, 'commission')
+                    ->placeholder(__('Commission')),
             ]);
     }
 

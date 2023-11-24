@@ -22,7 +22,11 @@ class CityResource extends Resource
     {
         return $form
             ->schema([
-
+                Forms\Components\TextInput::make('name')
+                    ->autofocus()
+                    ->required()
+                    ->unique(City::class, 'name')
+                    ->placeholder(__('Name')),
             ]);
     }
 

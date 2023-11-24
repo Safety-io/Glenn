@@ -22,7 +22,11 @@ class DepositResource extends Resource
     {
         return $form
             ->schema([
-
+                Forms\Components\TextInput::make('deposit')
+                    ->autofocus()
+                    ->required()
+                    ->unique(Deposit::class, 'deposit')
+                    ->placeholder(__('Deposit')),
             ]);
     }
 
