@@ -26,11 +26,11 @@
                                     @if ($house->image)
                                         @foreach($house->image as $image)
                                             @if($loop->first)
-                                                <button type="button" class="w-3 h-3 rounded-full" aria-current="true"
+                                                <button type="button" class="w-3 h-3 rounded-full !bg-[#eee0cf]/60" aria-current="true"
                                                         aria-label="Slide {{ $loop->index + 1 }}"
                                                         data-carousel-slide-to="{{ $loop->index }}"></button>
                                             @else
-                                                <button type="button" class="w-3 h-3 rounded-full" aria-current="false"
+                                                <button type="button" class="w-3 h-3 rounded-full !bg-[#eee0cf]/60" aria-current="false"
                                                         aria-label="Slide {{ $loop->index + 1 }}"
                                                         data-carousel-slide-to="{{ $loop->index }}"></button>
                                             @endif
@@ -42,8 +42,8 @@
                                         class="absolute top-0 start-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                         data-carousel-prev>
         <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#eee0cf]/30 dark:bg-[#eee0cf]/30 group-hover:bg-white/50 dark:group-hover:bg-[#eee0cf]/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-[#1f1b16] rtl:rotate-180" aria-hidden="true"
                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="M5 1 1 5l4 4"/>
@@ -55,8 +55,8 @@
                                         class="absolute top-0 end-0 z-30 flex items-center justify-center h-full px-4 cursor-pointer group focus:outline-none"
                                         data-carousel-next>
         <span
-            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-            <svg class="w-4 h-4 text-white dark:text-gray-800 rtl:rotate-180" aria-hidden="true"
+            class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-[#eee0cf]/30 dark:bg-[#eee0cf]/30 group-hover:bg-white/50 dark:group-hover:bg-[#eee0cf]/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+            <svg class="w-4 h-4 text-white dark:text-[#1f1b16] rtl:rotate-180" aria-hidden="true"
                  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 6 10">
                 <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                       d="m1 9 4-4-4-4"/>
@@ -69,8 +69,8 @@
 
                         </div>
                     </div>
-                    <div class="w-full lg:w-1/2">
-                        <div class="p-5 bg-white shadow lg:h-96">
+                    <div class="w-full lg:w-1/2 ">
+                        <div class="p-5 bg-[#fffbff] shadow lg:h-96 text-[#1f1b16] rounded-b-md md:rounded-r-md">
                             <ul class=" lg:self-start">
                                 <li class="flex gap-x-3 items-center mb-3 font-medium ">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
@@ -164,7 +164,7 @@
                             </ul>
                             <div class="flex flex-wrap items-center ">
                                 <a href="https://wa.me/905338505827"
-                                   class="px-6 py-4 {{--mb-4--}} {{--mr-2--}} text-xs font-bold bg-green-500  text-white text-center    rounded hover:bg-green-600  ">
+                                   class="px-4 py-3 {{--mb-4--}} {{--mr-2--}} text-md font-bold bg-[#d0ebc0] text-[#0c2006] text-center    rounded hover:bg-[#4e6543] hover:text-[#ffffff] ">
                                     Contact</a>
                             </div>
                         </div>
