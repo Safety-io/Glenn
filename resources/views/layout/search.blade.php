@@ -2,7 +2,7 @@
 
 {{--<div class="--}}{{--max-w-6xl--}}{{-- px-4 --}}{{--mx-auto--}}{{--">--}}
 {{--    <div class="  px-4 lg:px-6 py-2.5 ">--}}
-        <div class="w-full {{--mx-auto--}} mb-8 {{--sm:w-4/5--}} sm:mb-0 flex justify-end ">
+        <div class="w-full {{--mx-auto--}} mb-4 {{--sm:w-4/5--}} {{--sm:mb-0--}} flex justify-end mt-4">
             <button id="filter-btn" type="button" class="px-4 py-2 border-2 rounded-sm {{--mb-5--}}" >
                 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAGNJREFUSEvtkVsOABAMBPWoHIyj8uuVVrAqot9quzNkwEPg/80PEAk/iMhZG8XezAMfQkGlQQQPWLm+t6sreRRXzT1vwjaAB+zwoesgb1Dj4rgPOzgaMOvjHge/wSwBcQ8uOQGR9xgZA/2zngAAAABJRU5ErkJggg==" alt="icon"/>
             </button>
@@ -16,7 +16,7 @@
 
 
 
-<div class="absolute z-50 left-auto md:left-auto max-w-4xl w-4/6 md:w-4/6 shadow-2xl hover:shadow-lg {{--px-4--}}  hidden md:px-0 filter-none " id="filter">
+<div class="absolute z-50 left-auto md:left-auto max-w-4xl w-5/6 md:w-4/6 shadow-2xl hover:shadow-lg {{--px-4--}}  hidden md:px-0 filter-none " id="filter">
     <form action="/search" method="GET" class="{{--  md:w-4/6 --}}w-full {{--max-w-6xl--}}{{-- mx-auto--}} px-6 py-8 bg-white mt-4">
         <div class="flex flex-wrap -mx-3 mb-2 md:justify-between">
             <div class="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -135,23 +135,3 @@
         </div>
     </form>
 </div>
-<br>
-{{--
-<div class="max-w-6xl px-4 mx-auto">
-    <div class="items-center">
-        <div class="w-full mx-auto mb-16 sm:w-4/5 sm:mb-0">
-            @if($houses->count() == 0)
-                <div class="flex justify-center items-center h-screen">
-                    <div class="flex flex-col justify-center items-center">
-                        <h1 class="text-4xl font-bold text-gray-700">No Apartments Found</h1>
-                        <img src="{{ asset('/imgs/Empty.png') }}" alt="no apartments found" class="w-96 h-96">
-                        <a href="{{ route('pages.index') }}" class="text-blue-700 hover:text-blue-800">Go Back</a>
-                    </div>
-                </div>
-            @else
-                <h1 class="text-4xl font-bold text-gray-700">{{ $houses->count() }}  Apartments Found</h1>
-            @endif
-        </div>
-    </div>
-</div>--}}
-<br>

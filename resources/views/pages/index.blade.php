@@ -8,10 +8,8 @@
 </head>
 <body class="bg-gray-100 text-gray-900">
     @include('layout.header')
-    <br>
-    <br>
 
-    <main class="container mx-auto w-4/6 max-w-4xl">
+    <main class="container mx-auto w-5/6 max-w-4xl">
         @include('layout.search')
         {{--<section class="items-center lg:h-screen font-poppins text-gray-700">
             <div class="max-w-6xl px-4 mx-auto">
