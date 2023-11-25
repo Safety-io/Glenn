@@ -36,6 +36,11 @@ class House extends Model
 
     ];
 
+    public function city()
+    {
+        return $this->hasOne(City::class);
+    }
+
     public function standard()
     {
         return $this->hasOne(Standard::class);
