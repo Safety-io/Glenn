@@ -1,14 +1,14 @@
 @php use App\Models\City;use App\Models\Commission;use App\Models\Deposit;use App\Models\Price;use App\Models\Rent;use App\Models\Standard; @endphp
-<div class="max-w-6xl px-4 mx-auto">
-    <div class="items-center">
-        <div class="w-full mx-auto mb-16 sm:w-4/5 sm:mb-0">
-            <div class=" transition-shadow hover:shadow-lg">
+<div class="{{--max-w-6xl--}} {{--mx-auto--}} w-full">
+    {{--<div class="items-center">--}}
+        {{--<div class="w-full mx-auto mb-16 sm:w-4/5 sm:mb-0">
+            <div class=" transition-shadow hover:shadow-lg">--}}
                 <div class="flex flex-wrap mb-8">
                     <div class="self-stretch w-full overflow-hidden lg:w-1/2 ">
-                        <div class="h-96 overflow-hidden group">
+                        <div class=" overflow-hidden group">
                             <div id="default-carousel" class="relative w-full" data-carousel="slide">
                                 <!-- Carousel wrapper -->
-                                <div class="relative h-56 overflow-hidden rounded-lg md:h-96">
+                                <div class="relative h-72 overflow-hidden rounded-t md:rounded-l-lg md:h-96">
                                     <!-- Item 1 -->
                                     @if ($house->image)
                                         @foreach ($house->image as $image)
@@ -164,13 +164,13 @@
                             </ul>
                             <div class="flex flex-wrap items-center ">
                                 <a href="https://wa.me/905338505827"
-                                   class="px-6 py-4 mb-4 mr-2 text-xs font-bold bg-green-500  text-white text-center    rounded hover:bg-green-600  ">
+                                   class="px-6 py-4 {{--mb-4--}} {{--mr-2--}} text-xs font-bold bg-green-500  text-white text-center    rounded hover:bg-green-600  ">
                                     Contact</a>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+            {{--</div>
+        </div>--}}
+    {{--</div>--}}
 </div>
