@@ -131,13 +131,13 @@
         <div class="flex flex-wrap -mx-3 md:justify-between">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <div class="relative">
-                    <button type="reset"   class="    w-full bg-[#ffdad6] text-[#410002]  hover:text-[#ffffff] font-bold py-3 px-4 pr-8 rounded   focus:outline-none   " id="grid-state">Filter Reset
+                    <button type="reset"   class="    w-full bg-[#ffdad6] text-[#410002]  hover:text-[#ffffff] font-bold py-3 px-4 pr-8 rounded   focus:outline-none   >Filter Reset
                     </button>
                 </div>
             </div>
             <div class="w-full md:w-1/2 px-3{{-- mb-6--}} md:mb-0">
                 <div class="relative">
-                    <button type="submit"   class="    w-full bg-[#d0ebc0] text-[#0c2006]  hover:text-[#ffffff] font-bold py-3 px-4 pr-8 rounded   focus:outline-none   " id="grid-state">Filter Search</button>
+                    <button type="submit"   class="    w-full bg-[#d0ebc0] text-[#0c2006]  hover:text-[#ffffff] font-bold py-3 px-4 pr-8 rounded   focus:outline-none   ">Filter Search</button>
                 </div>
             </div>
         </div>
