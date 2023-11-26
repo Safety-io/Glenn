@@ -62,6 +62,8 @@ class HouseResource extends Resource
                     ->imageResizeTargetHeight('400')
                     ->imageEditor()
                     ->maxSize(1024 * 1024 * 2) // 2MB
+                    ->minFiles(2)
+                    ->maxFiles(5)
                     ->image()
                     ->multiple()
                     ->directory(config('image_upload_path')),
