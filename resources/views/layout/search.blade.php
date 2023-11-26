@@ -22,7 +22,7 @@
     <form action="/search" method="GET" class="{{--  md:w-4/6 --}}w-full {{--max-w-6xl--}}{{-- mx-auto--}} px-6 py-8 bg-[#fffbff] text-[#1f1b16] rounded-md">
         <div class="flex flex-wrap -mx-3 mb-2 md:justify-between">
             <div class="pb-10">
-                <h2 class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                <h2 class="uppercase text-1xl font-sm text-black md:text-xl">
                     Search Form
                 </h2>
             </div>
