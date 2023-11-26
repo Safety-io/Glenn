@@ -23,6 +23,7 @@
         <div class="flex flex-wrap -mx-3 mb-2 md:justify-between">
             <div class="px-3 mb-3">
                 <h2 class="block uppercase tracking-wide text-gray-700 text-1xl font-bold mb-2">
+
                     Search Form
                 </h2>
             </div>
