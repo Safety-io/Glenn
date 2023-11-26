@@ -39,7 +39,8 @@
                                             </select>
                                         </div>
                                         <div class="p-3 w-full md:w-1/2">
-                                            <label for="price">Price</label><select
+                                            <label for="price">Price</label>
+                                            <select
                                                 class="w-full bg-blue-50 outline-blue-300 outline-offset-4 transition-colors mt-2 py-2.5 px-4 text-gray-700 text-base font-normal border border-gray-200 rounded-lg "
                                                 name="monthly" id="price">
                                                 <option>All</option>
