@@ -36,7 +36,7 @@
                         <a href="{{ route('pages.about') }}" class="block py-2 pr-4 pl-3 border-gray-100  lg:p-0 ">About</a>
                     </li>
                 </ul>
-            </div>x
+            </div>
         </div>
     </nav>
 </header>
