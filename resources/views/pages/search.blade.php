@@ -24,6 +24,7 @@
                         </div>
                     </div>
                 @else
+                    <h1 class="mb-4 text-lg font-bold text-[#4e6543]">{{$houses->count() }} {{ $houses->count() == 1 ? 'apartment was found': "apartments were found" }} </h1>
                     @foreach( $houses as $house)
                         <x-house-item :$house />
                     @endforeach
