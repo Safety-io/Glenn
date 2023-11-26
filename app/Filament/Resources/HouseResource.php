@@ -33,30 +33,37 @@ class HouseResource extends Resource
                     ->autofocus()
                     ->placeholder('Address ex: 1154 Fort Street Mall'),
                 Select::make('city')
+                    ->required()
                     ->options(function () {
                         return City::all()->pluck('name');
                     }),
                 Select::make('standard')
+                    ->required()
                     ->options(function () {
                         return Standard::all()->pluck('standard');
                     }),
                 Select::make('monthly')
+                    ->required()
                     ->options(function () {
                         return Price::all()->pluck('price');
                     }),
                 Select::make('rent')
+                    ->required()
                     ->options(function () {
                         return Rent::all()->pluck('rent');
                     }),
                 Select::make('deposit')
+                    ->required()
                     ->options(function () {
                         return Deposit::all()->pluck('deposit');
                     }),
                 Select::make('commission')
+                    ->required()
                     ->options(function () {
                         return Commission::all()->pluck('commission');
                     }),
                 FileUpload::make('image')
+                    ->required()
                     ->imageCropAspectRatio('1:1')
                     ->imageResizeTargetWidth('400')
                     ->imageResizeTargetHeight('400')
@@ -68,6 +75,7 @@ class HouseResource extends Resource
                     ->multiple()
                     ->directory(config('image_upload_path')),
                 Select::make('house_statue')
+                    ->required()
                     ->options(function () {
                         return ["Available", "Unavailable"];
                     }),
