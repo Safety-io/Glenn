@@ -48,12 +48,12 @@ class BlogController extends Controller
     }
     public function search(Request $request) : View
     {
-        $city = $request->input('city');
-        $standard = $request->input('standard');
-        $monthly = $request->input('monthly');
-        $rent = $request->input('rent');
-        $deposit = $request->input('deposit');
-        $commission = $request->input('commission');
+        $city = $request->input('city', '');
+        $standard = $request->input('standard', '');
+        $monthly = $request->input('monthly', '');
+        $rent = $request->input('rent', '');
+        $deposit = $request->input('deposit', '');
+        $commission = $request->input('commission', '');
 
         $houses = House::query()
             ->where(function($query) use ($city) {
