@@ -29,7 +29,7 @@
                     <select name="city" class="block appearance-none w-full bg-[#eee0cf] border border-[#4e4539] text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                         <option value="">All</option>
                         @foreach($cities as $it)
-                            <option value="{{ $it->name}}">{{$it->name }}</option>
+                            <option value="{{ $it->id}}">{{$it->name }}</option>
                         @endforeach
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -45,7 +45,7 @@
                     <select name="standard" class="block appearance-none w-full bg-[#eee0cf] border border-[#4e4539] text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                         <option value="">All</option>
                         @foreach($standards as $it)--}}
-                        <option value="{{ $it->standard }}">{{ $it->standard }}</option>
+                        <option value="{{ $it->id }}">{{ $it->standard }}</option>
                         @endforeach
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -61,7 +61,7 @@
                     <select name="rent" class="block appearance-none w-full bg-[#eee0cf] border border-[#4e4539] text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                         <option value="">All</option>
                         @foreach($rents as $it)
-                            <option value="{{ $it->rent }}">{{ $it->rent }}</option>
+                            <option value="{{ $it->id }}">{{ $it->rent }}</option>
                         @endforeach
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -79,7 +79,7 @@
                     <select class="block appearance-none w-full bg-[#eee0cf] border border-[#4e4539] text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                         <option value="">All</option>
                         @foreach($deposits as $it)
-                            <option value="{{ $it->deposit }}">{{ $it->deposit }}</option>
+                            <option value="{{ $it->id }}">{{ $it->deposit }}</option>
                         @endforeach
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -95,7 +95,7 @@
                     <select name="commission" class="block appearance-none w-full bg-[#eee0cf] border border-[#4e4539] text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                         <option value="">All</option>
                         @foreach($commissions as $it)--}}
-                        <option value="{{ $it->commission }}">{{ $it->commission }}</option>
+                        <option value="{{ $it->id }}">{{ $it->commission }}</option>
                         @endforeach
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
@@ -111,7 +111,7 @@
                     <select name="monthly" class="block appearance-none w-full bg-[#eee0cf] border border-[#4e4539] text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white focus:border-gray-500" id="grid-state">
                         <option value="">All</option>
                         @foreach($prices as $it)--}}
-                        <option value="{{ $it->price }}">{{ $it->price }}</option>
+                        <option value="{{ $it->id }}">{{ $it->price }}</option>
                         @endforeach
                     </select>
                     <div class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-700">
