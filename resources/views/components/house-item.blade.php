@@ -74,100 +74,58 @@
                             <ul class=" lg:self-start">
                                 <li class="flex gap-x-3 items-center mb-3 font-medium ">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjdJREFUSEu11dmrTmEUBvDfMacMkTlEhDIryZThQobEjSJKhkjccCH+AG5QoiSkSDJdSOTGlKFEkcxCxsxKkplWvUef49t7f+G8d3u31nretZ5nPW+VWj5VtVxfJQCdMB0T0C9d6BKOYDce510yD6ApdmJyToEf2Is5+FAuLgugMc6jNz5hM9bjXirSFUsxHw1S7Ah8qQmSBbADs/AI43Ajo4u+OIp2WIdllQD0wRV8xWDEvNtiK4akAmcxDy8xEqfwGV3wtBSkXAcbsBgbsSQVrwYpzY3u+uMNdmEGVmJ1EcAddEvzv5aInomDWJGS12J84mYhRuM4TqeOfmGU6yBIDeLq4jueoD3a4EUJyXfxEJ3RAq9TNy2LOniL5miC90nnHdCxRPOxGw/Sd/yP2HeI3ADL7eAiBqEHbmM7ZqcRLUcjrEqLty2R3QvXcSEJIxdgS0oKgoPoVriK1jUkGBscJMdoQp5rsAmLijoYg2O4jAEpODiolmnwcgYL8Bx1cBPdMQznigCC+PuJvClpNHl2EwoLS7mFnpUsWsRMwx48QyzeqwyEID/GF6KYhMOVAkTcCYxKWzoW32okN0zjGIhDWaaY56ZhD7FoIbtQSxhbuGecetiHGGHsQpAdEv3jFL0HQ3ES9REGODfJNN6BGElYdBAbgih7igAiaSr2J7XEIxPvxPBk4xOT4jJFUAlAJAcHB9AsVQry4yGKxco9lQJEkdjWUNbHNPvfbPlfRlR0yf/WwV8B/QQWDHYZj3ZwRAAAAABJRU5ErkJggg=="/>
                                     </a>
                                     <span>Location : {{ City::find($house->city + 1)?->name ?? 'Cyprus' /*$house->city->name*/}}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3 font-medium ">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAM9JREFUSEvt1DFqwkEQxeFPCHgUIanMCWy8QW5iaxHB0qPkCIKeQC2i4FECAUPAbfS/OxthMYFsPbzfmzez09P49RrriwAvmGOQMXLEFG85oxFgj8egywOebgWcKiPMGo06aA5IDeRAkcFwyP+A3xHREJvMuj5jW1rl0hb0McMEDxmRTyzwio+umhLgvfRDL8R2+O706pUAtZ8siXZq3RWwwqjyFi0x/mlEXfUptvBEFHMruP77gPW5u9rZVJ+KlFoSTqBwB6qHFSplCpoDvgAuUB0ZwJGejgAAAABJRU5ErkJggg=="/>
                                     </a>
                                     <span>Address : {{ $house->address}}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3 font-medium">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAVJJREFUSEvV1b0uBVEUhuHnFBqdQiEKChKFxAUIoVCIgkIibkOiJBGd6F0CHQUq8ZNwA1R+QyGikKg0CNmyTzLGHjmDIzm7m73W+t611nyTqajzqdRZXxlAK7bxhlE81NJcCtCEdYzVIpDJ2cQEXrN1KcAslgrEr+N9Z0E81C5/B2jDBZoTAjfoj/dH6EjkPKELd9VYfoI1TCUKrzCI2xhrRxEkaEynAMPYTYhfYgDPcYIXbCFADpFa1xAOglZ2ghP05gDnsfMguoLJGJ/HYoTsx7VkS4/RlwcE+2XPGUInYZ/j2MgEH9ESn8N7C9125+o/ms9OUAWknBUsG2xYPafoKXDSJ51aAUFrDjO4xwJWfwv4bqKsdj6v5gn+HZA3QXW9P54gv+IiQFFeKRcFkcYBFLiv9PWXFe3FL7e0UqJgByP5L/kvhL9olPll/qiBxge8A94KSRn+hJMJAAAAAElFTkSuQmCC"/>
                                     </a>
                                     <span>Standard : {{ Standard::find($house->standard + 1)?->standard }}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3 font-medium">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAATlJREFUSEvl1L8rhWEYxvHPSZJIMVEii8KqxGhSGCRWC/EfyGAx+QdkkEwmkiiblJRQMlAsNsnAIpuip96j06lznvOeH5N7ent77ut7d90/MmocmRrr+x+AOixiGV14ww22cBSzOGZRE04xVEBoBevFIDHAGlbxgQWcJ2KT2EAjxnFSCBIDPKEXM9jPE1nCJg4wXS7gJ0lswWeeSOhNN54rsegbQage4Tt1xCx6RTs68ZJaneiiHWMC89iuJiDrfbm9+8srZFHNAdkKmpPpCRMUJil1xJocdiDswiP6UquX0OTsMu1httqABtyiH1M4rCagDbsYyxF9x0MCvcAVejCX7Enu2+gUjSZXNE3R4eJe5ycUanL4f4f75KBdogPDGMEgBtCKM+wkR++rVECayou+jY1pxaCaA34BtpAxGfHt0MMAAAAASUVORK5CYII="/>
                                     </a>
                                     <span>Monthly : {{ Price::find($house->monthly + 1)->price . '£'}}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3  font-medium">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAIBJREFUSEtjZKAxYKSx+QykWJDIwMDQCXVQOQMDw3xiHEeKBa8YGBhEoYa+ZmBgEBtyFtA8iIgJEQw12OLgP1kmITShmDkgFmDzAC5fEUyFBBVAbRu1gGC6GT5BBEsUMB8RTCQEFaClolELcKYm9DAfjQOCGY9oBcQmU6INRFcIABAiHhlgT66aAAAAAElFTkSuQmCC"/>
                                     </a>
                                     <span>Commission :  {{ Commission::find($house->commission + 1)->commission }}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3  font-medium">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAJZJREFUSEvt1MsJwkAUheEvdQiCuNBubCYbO9CGLMSNO1Gwj0gigRCjQWbuZnD29z9zzn1Ugl8VzFeWwA4HbBNju6DGqeUMI3pgkQjvy69YjwWaTPAe031+6CBcILOBF66sMQ2PKLzJZQl8mq5fXH5dtHCBHBP15uCOZQ4ybliNN7k910dsEkXO2E+d60TudPn/Fs3G+gQekhQZlIm1PgAAAABJRU5ErkJggg=="/>
                                     </a>
                                     <span>Rent :  {{ Rent::find($house->rent + 1)->rent }}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3  font-medium">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAbdJREFUSEvV1D1oFVEQhuEngiAIFmksRFHBSITYqCD4UyhaBMHKWFhYJhZGG4VY+NMoaKOx0VZsTBUCNoqCkGCjjRYaQlSijY2FKAgikQlj2Cx77957MaDTLLvn7LzzfTPndFnm6Frm/P4pwBZcSsUX8a4V9a0qWIm32JxJZ9GLn3WQVgFncBPTmXArhnH7bwBWYw7dOMZC38bwBRvwvRmkFQVXEJ6/xvZM9gp9uIxYbxh1gKg6qg8VB/E0Mx3Ak6w+VISayqgDjOI0HuNwKcMjHMItnO0EsA7vERMU1oRF85koCguLwqqYpJiuT1WQZgru40Q29Hj+XATEpwcYwD2cbAfwp7pfiAMWSiLKgE2YycnaVhjjRVYjBQ/Rj7sYKlRWBsTSHQxiAkfLKqoAezCJH9iIzzWAtfiAVdiFF0VIFSA27MA1XKg7qbl+FSNZ2L5mgJA4jq9Yn8/i/iqLYn0NPubzCMLihSgqWIE36MF53KiovhEgtp7D9dKJXwLYj2fpeXgfPWgnogfRi+jJXkyVFezG83YyNtm7Ey/LgHgPW07l3dMJ61te4YvDUXcXdQJZ8s//D/gNQe1OGS34fZEAAAAASUVORK5CYII="/>
                                     </a>
                                     <span>Deposit : {{ Deposit::find($house->deposit + 1)->deposit }}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3  font-medium">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
-                                             color="gray">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
-                                        </svg>
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK5JREFUSEvtlcEJwzAMRV/mKBRCDu02WSaXbNAulEF6yS000D0SAnYLNopARimU+mbsryfpG6vCeVXO8dEAS0hAuqedHw9ogRtwNbZuBDpgiPq09BdwMgaPsgloJEDsaSHj0/q0AtU0hZzpvwZwb9HvAKJHqXnSPnudksnpRTeA1Yt34loF7oC/B9k8cP/sZuBsdTbonkAtfdfbwLkDFyPkAfR7A8cYV5ZpQ78YuAI+nioZTWsWPwAAAABJRU5ErkJggg=="/>
                                     </a>
                                     created
                                     <span>Uploaded : {{ $house->created = date('d-m-Y', strtotime($house->created))}}</span>
                                 </li>
                                 <li class="flex gap-x-3 items-center mb-3  font-medium">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
-                                             fill="currentColor" class="bi bi-check-circle-fill" viewBox="0 0 16 16"
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"
                                              color="{{ strtolower($house->house_statue == 0 ? "available": "unavailable" ) == "available" ? "green": "red" }}">
-                                            <path
-                                                d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path>
+                                            <path d="M19 3H5c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h14c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2zm-7.933 13.481-3.774-3.774 1.414-1.414 2.226 2.226 4.299-5.159 1.537 1.28-5.702 6.841z"></path>
                                         </svg>
                                     </a>
                                     <span>Statue : {{ $house->house_statue == 0 ? "Available": "Unavailable" }}</span>
