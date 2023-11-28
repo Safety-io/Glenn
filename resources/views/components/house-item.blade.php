@@ -70,7 +70,7 @@
                         </div>
                     </div>
                     <div class="w-full lg:w-1/2 ">
-                        <div class="p-5 bg-[#fffbff] shadow lg:h-96 text-[#1f1b16] rounded-b-md md:rounded-r-md">
+                        <div class="p-5 bg-[#fffbff] shadow text-[#1f1b16] rounded-b-md md:rounded-r-md">
                             <ul class=" lg:self-start">
                                 <li class="flex gap-x-3 items-center mb-3 font-medium ">
                                     <a href="" class="mr-1 text-green-600 dark:text-gray-400">
