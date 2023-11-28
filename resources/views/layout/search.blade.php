@@ -21,7 +21,7 @@
 <div class="absolute z-50 left-auto md:left-auto max-w-4xl w-5/6 shadow-2xl hover:shadow-lg {{--px-4--}}  hidden md:px-0 filter-none " id="filter">
     <form action="/search" method="GET" class="{{--  md:w-4/6 --}}w-full {{--max-w-6xl--}}{{-- mx-auto--}} px-6 py-8 bg-[#fffbff] text-[#1f1b16] rounded-md">
         <div class="flex flex-wrap -mx-3 mb-2 md:justify-between">
-            <div class="px-3 mb-3">
+            <div class="px-3 mb-3 w-full">
                 <h2 class="block uppercase tracking-wide text-gray-700 text-1xl font-bold mb-2">
 
                     Search Form
@@ -131,7 +131,7 @@
         <div class="flex flex-wrap -mx-3 md:justify-between">
             <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                 <div class="relative">
-                    <button type="reset"   class="    w-full bg-[#ffdad6] text-[#410002]  hover:text-[#ffffff] font-bold py-3 px-4 pr-8 rounded   focus:outline-none   >Filter Reset
+                    <button type="reset"   class="    w-full bg-[#ffdad6] text-[#410002]  hover:text-[#ffffff] font-bold py-3 px-4 pr-8 rounded   focus:outline-none   ">Filter Reset
                     </button>
                 </div>
             </div>
