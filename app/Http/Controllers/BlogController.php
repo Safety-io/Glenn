@@ -86,7 +86,7 @@ class BlogController extends Controller
                     $query->where('commission', 'LIKE', "%$commission%");
                 }
             })
-            ->get();
+            ->paginate(10);
 
         return view('pages.search', [
             'houses' => $houses,

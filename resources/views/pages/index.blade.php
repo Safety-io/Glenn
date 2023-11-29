@@ -34,6 +34,7 @@
                 {{--</div>
             </div>
         </section>--}}
+        <div>{{ $houses->links() }}</div>
     </main>
 
     <x-footer />
