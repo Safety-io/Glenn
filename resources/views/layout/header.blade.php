@@ -1,17 +1,4 @@
 <!-- component -->
-
-
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>@yield('title')</title>
-</head>
-<body>
 <header>
     <nav class="w-full bg-[#7d5700] border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-[#54442a] text-[#f8dfbb]">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
@@ -40,8 +27,5 @@
         </div>
     </nav>
 </header>
-<script src="https://unpkg.com/flowbite@1.4.7/dist/flowbite.js"></script>
-
-
 
 
