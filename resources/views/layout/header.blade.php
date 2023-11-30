@@ -1,4 +1,5 @@
 <!-- component -->
+<script type="module" defer src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.js"></script>
 <header>
     <nav class="w-full bg-[#7d5700] border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-[#54442a] text-[#f8dfbb]">
         <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
