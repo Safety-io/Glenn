@@ -24,7 +24,7 @@
         @else
             <h1 class="mb-4 text-lg font-bold text-[#4e6543]">{{$houses->count() }} {{ $houses->count() == 1 ? 'apartment was found': "apartments were found" }} </h1>
             @foreach( $houses as $house)
-                <livewire:house-item :$house />
+                <livewire:house-item :house="$house" :key="$house->id" />
             @endforeach
         @endif
 
