@@ -9,7 +9,7 @@
     <link rel="icon" type="image/x-icon" href="favicon.png">
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
-<body>
+<body class="bg-gray-100 text-gray-900">
     @include('layout.header')
     <main class="container mx-auto w-5/6 max-w-4xl">
         @include('layout.search')
