@@ -65,8 +65,8 @@
 
             </div>
         </div>
-        <div class="w-full lg:w-1/2 md:h-[27rem] overflow-hidden rounded-b-md md:rounded-r-md">
-            <div class="p-5 bg-[#fffbff] shadow text-[#1f1b16]">
+        <div class="w-full lg:w-1/2 bg-[#fffbff] md:h-[27rem] overflow-hidden rounded-b-md md:rounded-r-md">
+            <div class="p-5 text-[#1f1b16]">
                 <ul class=" lg:self-start">
                     <li class="flex gap-x-3 items-center mb-3 font-medium ">
                         <a href="" class="mr-1 text-green-600 dark:text-gray-400">
