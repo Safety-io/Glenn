@@ -115,7 +115,7 @@
                             <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAK5JREFUSEvtlcEJwzAMRV/mKBRCDu02WSaXbNAulEF6yS000D0SAnYLNopARimU+mbsryfpG6vCeVXO8dEAS0hAuqedHw9ogRtwNbZuBDpgiPq09BdwMgaPsgloJEDsaSHj0/q0AtU0hZzpvwZwb9HvAKJHqXnSPnudksnpRTeA1Yt34loF7oC/B9k8cP/sZuBsdTbonkAtfdfbwLkDFyPkAfR7A8cYV5ZpQ78YuAI+nioZTWsWPwAAAABJRU5ErkJggg==" alt="date"/>
                         </a>
                         created
-                        <span>Uploaded : {{ $house->created = date('d-m-Y', strtotime($house->created))}}</span>
+                        <span>Uploaded : {{ $house->created_at = date('d-m-Y', strtotime($house->created_at))}}</span>
                     </li>
                     <li class="flex gap-x-3 items-center mb-3  font-medium">
                         <a href="" class="mr-1 text-green-600 dark:text-gray-400">
