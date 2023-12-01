@@ -28,6 +28,6 @@ class Pull extends Command implements Isolatable
     public function handle(): void
     {
         //
-        echo `git pull origin master`;
+        echo `git pull`;
     }
 }

@@ -3,7 +3,13 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\HouseResource\Pages;
+use App\Models\City;
+use App\Models\Commission;
+use App\Models\Deposit;
 use App\Models\House;
+use App\Models\Price;
+use App\Models\Rent;
+use App\Models\Standard;
 use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\TextInput;
@@ -27,40 +33,51 @@ class HouseResource extends Resource
                     ->autofocus()
                     ->placeholder('Address ex: 1154 Fort Street Mall'),
                 Select::make('city')
+                    ->required()
                     ->options(function () {
-                        return House::all()->pluck('city', 'city');
+                        return City::all()->pluck('name');
                     }),
                 Select::make('standard')
+                    ->required()
                     ->options(function () {
-                        return House::all()->pluck('standard', 'standard');
+                        return Standard::all()->pluck('standard');
                     }),
                 Select::make('monthly')
+                    ->required()
                     ->options(function () {
-                        return House::all()->pluck('monthly', 'monthly');
+                        return Price::all()->pluck('price');
                     }),
                 Select::make('rent')
+                    ->required()
                     ->options(function () {
-                        return House::all()->pluck('rent', 'rent');
+                        return Rent::all()->pluck('rent');
                     }),
                 Select::make('deposit')
+                    ->required()
                     ->options(function () {
-                        return House::all()->pluck('deposit', 'deposit');
+                        return Deposit::all()->pluck('deposit');
                     }),
                 Select::make('commission')
+                    ->required()
                     ->options(function () {
-                        return House::all()->pluck('commission', 'commission');
+                        return Commission::all()->pluck('commission');
                     }),
                 FileUpload::make('image')
+                    ->required()
                     ->imageCropAspectRatio('1:1')
                     ->imageResizeTargetWidth('400')
                     ->imageResizeTargetHeight('400')
                     ->imageEditor()
                     ->maxSize(1024 * 1024 * 2) // 2MB
+                    ->minFiles(2)
+                    ->maxFiles(5)
                     ->image()
+                    ->multiple()
                     ->directory(config('image_upload_path')),
                 Select::make('house_statue')
+                    ->required()
                     ->options(function () {
-                        return House::all()->pluck('house_statue', 'house_statue');
+                        return ["Available", "Unavailable"];
                     }),
             ]);
     }

@@ -1,4 +1,5 @@
 deploy: public/build/manifest.json public/build
+	npm run build
 	rsync -avz public/build gn:~/public_html/public
 	ssh gn 'cd ~/public_html && git pull && make install'
 
@@ -19,7 +20,7 @@ vendor/autoload.php: composer.lock
 
 public/build/manifest.json: package.json
 	npm install
-	npm run dev
+	#npm run dev
 
 public/build:
 	npm run build
