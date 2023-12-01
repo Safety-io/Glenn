@@ -58,31 +58,37 @@ class BlogController extends Controller
         $houses = House::query()
             ->where(function($query) use ($city) {
                 if (!empty($city)) {
+                    $city--;
                     $query->where('city', 'LIKE', "%$city%");
                 }
             })
             ->orWhere(function(Builder $query) use ($standard) {
                 if (!empty($standard)) {
+                    $standard--;
                     $query->where('standard', 'LIKE', "%$standard%");
                 }
             })
             ->orWhere(function(Builder $query) use ($monthly) {
                 if (!empty($monthly)) {
+                    $monthly--;
                     $query->where('monthly', 'LIKE', "%$monthly%");
                 }
             })
             ->orWhere(function(Builder $query) use ($rent) {
                 if (!empty($rent)) {
+                    $rent--;
                     $query->where('rent', 'LIKE', "%$rent%");
                 }
             })
             ->orWhere(function(Builder $query) use ($deposit) {
                 if (!empty($deposit)) {
+                    $deposit--;
                     $query->where('deposit', 'LIKE', "%$deposit%");
                 }
             })
             ->orWhere(function(Builder $query) use ($commission) {
                 if (!empty($commission)) {
+                    $commission--;
                     $query->where('commission', 'LIKE', "%$commission%");
                 }
             })
