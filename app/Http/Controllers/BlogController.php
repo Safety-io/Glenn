@@ -31,7 +31,8 @@ class BlogController extends Controller
 
     public function index():View | Paginator | App
     {
-        $houses = House::query()->paginate(10);
+        $houses = House::query()->orderBy('created_at', 'desc')->paginate(10);
+
 
         return view(
             'pages.index',
