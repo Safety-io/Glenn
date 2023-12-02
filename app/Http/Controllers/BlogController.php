@@ -26,6 +26,7 @@ class BlogController extends Controller
         $this->commissions = Commission::all();
         $this->deposits = Deposit::all();
         $this->prices = Price::all();
+
     }
 
     public function index():View | Paginator | App
